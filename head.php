@@ -42,6 +42,12 @@ if (is_file(G5_PATH.'/components/tracking-body.php')) {
     include_once(G5_PATH.'/components/tracking-body.php');
 }
 
+// GAL 폰트 (Pretendard + Manrope)
+add_stylesheet('<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">', 8);
+add_stylesheet('<link rel="preconnect" href="https://fonts.googleapis.com">', 8);
+add_stylesheet('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>', 8);
+add_stylesheet('<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">', 8);
+
 // 템플릿 전용 CSS/JS (default.css·common.js 이후 로드)
 add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/custom.css">', 10);
 if ($g5_css_brand !== '') {
@@ -90,9 +96,15 @@ if ($g5_site_title === '') {
     $g5_site_title = get_text($config['cf_title']);
 }
 
-// 상담문의 URL (메인: contact 섹션 / 그 외: Q&A)
-$g5_inquiry_url = defined('_INDEX_') ? G5_URL.'/#section-contact' : G5_BBS_URL.'/qalist.php';
-$g5_consult_label = function_exists('g5site_cfg') ? g5site_cfg('consultation_text', '상담문의') : '상담문의';
+// 상담문의 URL — GAL: 카카오톡 상담
+$g5_kakao_url = function_exists('g5site_cfg') ? g5site_cfg('kakao_url', 'https://pf.kakao.com/_EkyrX/chat') : 'https://pf.kakao.com/_EkyrX/chat';
+$g5_inquiry_url = ($g5_kakao_url !== '' && $g5_kakao_url !== '#') ? $g5_kakao_url : (defined('_INDEX_') ? G5_URL.'/#final-cta' : G5_URL.'/page/counseling.php');
+$g5_consult_label = function_exists('g5site_cfg') ? g5site_cfg('consultation_text', '카카오톡 상담') : '카카오톡 상담';
+$g5_cta_is_external = (strpos($g5_inquiry_url, 'http') === 0);
+
+if (is_file(G5_PATH.'/section/_gal_data.php')) {
+    include_once(G5_PATH.'/section/_gal_data.php');
+}
 
 // site_config 브랜드 색 → :root (hex만 허용)
 $g5_css_brand = '';
@@ -169,6 +181,26 @@ if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
                     <?php
                         $gnb_i++;
                     }
+                    if ($gnb_i === 0 && !empty($gal_nav_fallback)) {
+                        foreach ($gal_nav_fallback as $gal_item) {
+                            $has_sub = !empty($gal_item['sub']);
+                    ?>
+                    <li class="site-header__gnb-item<?php echo $has_sub ? ' has-sub' : ''; ?>">
+                        <a href="<?php echo htmlspecialchars($gal_item['link'], ENT_QUOTES, 'UTF-8'); ?>" class="site-header__gnb-link"><?php echo get_text($gal_item['name']); ?></a>
+                        <?php if ($has_sub) { ?>
+                        <ul class="site-header__gnb-sub">
+                            <?php foreach ($gal_item['sub'] as $gal_sub) { ?>
+                            <li class="site-header__gnb-sub-item">
+                                <a href="<?php echo htmlspecialchars($gal_sub['link'], ENT_QUOTES, 'UTF-8'); ?>" class="site-header__gnb-sub-link"><?php echo get_text($gal_sub['name']); ?></a>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                        <?php } ?>
+                    </li>
+                    <?php
+                            $gnb_i++;
+                        }
+                    }
                     if ($gnb_i === 0) {
                     ?>
                     <li class="site-header__gnb-item site-header__gnb-item--empty">
@@ -179,21 +211,6 @@ if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
             </nav>
 
             <div class="site-header__utils">
-                <div class="site-header__search">
-                    <fieldset id="hd_sch">
-                        <legend class="sound_only">사이트 내 전체검색</legend>
-                        <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL; ?>/search.php" onsubmit="return fsearchbox_submit(this);">
-                            <input type="hidden" name="sfl" value="wr_subject||wr_content">
-                            <input type="hidden" name="sop" value="and">
-                            <label for="sch_stx" class="sound_only">검색어 필수</label>
-                            <input type="text" name="stx" id="sch_stx" maxlength="20" placeholder="검색" class="site-header__search-input">
-                            <button type="submit" id="sch_submit" value="검색" class="site-header__search-btn">
-                                <i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span>
-                            </button>
-                        </form>
-                    </fieldset>
-                </div>
-
                 <ul class="site-header__account hd_login">
                     <?php if ($is_member) { ?>
                     <li><a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=<?php echo G5_BBS_URL; ?>/register_form.php">정보수정</a></li>
@@ -202,12 +219,11 @@ if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
                     <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
                     <?php } ?>
                     <?php } else { ?>
-                    <li><a href="<?php echo G5_BBS_URL; ?>/register.php">회원가입</a></li>
                     <li><a href="<?php echo G5_BBS_URL; ?>/login.php">로그인</a></li>
                     <?php } ?>
                 </ul>
 
-                <a href="<?php echo $g5_inquiry_url; ?>" class="btn btn-primary site-header__cta"><?php echo get_text($g5_consult_label); ?></a>
+                <a href="<?php echo htmlspecialchars($g5_inquiry_url, ENT_QUOTES, 'UTF-8'); ?>" class="btn btn-primary site-header__cta gal-header-cta"<?php echo $g5_cta_is_external ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>><?php echo get_text($g5_consult_label); ?></a>
 
                 <button type="button" class="site-header__menu-btn" aria-controls="siteMobileNav" aria-expanded="false" title="전체메뉴">
                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -223,6 +239,10 @@ if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
                     <i class="fa fa-times" aria-hidden="true"></i>
                     <span class="sound_only">메뉴 닫기</span>
                 </button>
+            </div>
+            <div class="gal-mobile-quick">
+                <a href="<?php echo function_exists('gal_page_url') ? gal_page_url('sermons') : G5_URL.'/page/sermons.php'; ?>" class="gal-mobile-quick__btn gal-mobile-quick__btn--primary">말씀 보기</a>
+                <a href="<?php echo function_exists('gal_page_url') ? gal_page_url('about') : G5_URL.'/page/about.php'; ?>" class="gal-mobile-quick__btn">GAL교회 알아보기</a>
             </div>
             <ul class="site-header__mobile-list">
                 <?php
@@ -256,19 +276,28 @@ if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
                 <?php
                     $mnb_i++;
                 }
+                if ($mnb_i === 0 && !empty($gal_nav_fallback)) {
+                    foreach ($gal_nav_fallback as $gal_item) {
+                ?>
+                <li class="site-header__mobile-item">
+                    <a href="<?php echo htmlspecialchars($gal_item['link'], ENT_QUOTES, 'UTF-8'); ?>" class="site-header__mobile-link"><?php echo get_text($gal_item['name']); ?></a>
+                    <?php if (!empty($gal_item['sub'])) { ?>
+                    <ul class="site-header__mobile-sub">
+                        <?php foreach ($gal_item['sub'] as $gal_sub) { ?>
+                        <li><a href="<?php echo htmlspecialchars($gal_sub['link'], ENT_QUOTES, 'UTF-8'); ?>"><?php echo get_text($gal_sub['name']); ?></a></li>
+                        <?php } ?>
+                    </ul>
+                    <?php } ?>
+                </li>
+                <?php
+                    }
+                    $mnb_i = count($gal_nav_fallback);
+                }
                 if ($mnb_i === 0) {
                 ?>
                 <li class="site-header__mobile-item site-header__mobile-item--empty">
                     <span>메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">메뉴설정</a><?php } ?></span>
                 </li>
-                <?php } ?>
-            </ul>
-            <ul class="site-header__mobile-utils">
-                <li><a href="<?php echo G5_BBS_URL; ?>/faq.php">FAQ</a></li>
-                <li><a href="<?php echo G5_BBS_URL; ?>/qalist.php">Q&amp;A</a></li>
-                <li><a href="<?php echo G5_BBS_URL; ?>/new.php">새글</a></li>
-                <?php if (defined('G5_USE_SHOP') && G5_USE_SHOP) { ?>
-                <li><a href="<?php echo G5_SHOP_URL; ?>">쇼핑몰</a></li>
                 <?php } ?>
             </ul>
             <div class="site-header__mobile-account">
@@ -283,7 +312,7 @@ if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
                 <a href="<?php echo G5_BBS_URL; ?>/login.php">로그인</a>
                 <?php } ?>
             </div>
-            <a href="<?php echo $g5_inquiry_url; ?>" class="btn btn-primary site-header__mobile-cta"><?php echo get_text($g5_consult_label); ?></a>
+            <a href="<?php echo htmlspecialchars($g5_inquiry_url, ENT_QUOTES, 'UTF-8'); ?>" class="btn btn-primary site-header__mobile-cta gal-header-cta"<?php echo $g5_cta_is_external ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>><?php echo get_text($g5_consult_label); ?></a>
         </div>
         <div class="site-header__overlay" aria-hidden="true"></div>
     </header>

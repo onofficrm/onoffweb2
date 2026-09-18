@@ -645,6 +645,98 @@
   };
 
   /* --------------------------------------------------------------------------
+   * GAL CHURCH — sermon / welcome modals + floating tip
+   * -------------------------------------------------------------------------- */
+  G5Template.openGalModal = function (modal) {
+    if (!modal) return;
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    G5Template.lockBodyScroll(true);
+  };
+
+  G5Template.closeGalModal = function (modal) {
+    if (!modal) return;
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden', 'true');
+    G5Template.lockBodyScroll(false);
+  };
+
+  G5Template.initGalSermonModal = function () {
+    var modal = document.getElementById('galSermonModal');
+    if (!modal) return;
+
+    var titleEl = document.getElementById('galSermonModalTitle');
+    var seriesEl = document.getElementById('galSermonModalSeries');
+    var metaEl = document.getElementById('galSermonModalMeta');
+    var summaryEl = document.getElementById('galSermonModalSummary');
+
+    var fill = function (data) {
+      if (seriesEl) seriesEl.textContent = data.series || '';
+      if (titleEl) titleEl.textContent = data.title || '';
+      if (metaEl) {
+        metaEl.textContent = [data.date, data.preacher, data.scripture].filter(Boolean).join(' · ');
+      }
+      if (summaryEl) summaryEl.textContent = data.summary || '';
+    };
+
+    G5Template.qsa('[data-sermon-open]').forEach(function (card) {
+      var open = function () {
+        var raw = card.querySelector('.gal-sermon-data');
+        if (!raw) return;
+        try {
+          fill(JSON.parse(raw.textContent));
+          G5Template.openGalModal(modal);
+        } catch (e) {}
+      };
+      card.addEventListener('click', open);
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          open();
+        }
+      });
+    });
+
+    modal.querySelectorAll('[data-gal-modal-close]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        G5Template.closeGalModal(modal);
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) {
+        G5Template.closeGalModal(modal);
+      }
+    });
+  };
+
+  G5Template.initGalWelcomeModal = function () {
+    var modal = document.getElementById('galWelcomeModal');
+    if (!modal) return;
+
+    G5Template.qsa('[data-welcome-open]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        G5Template.openGalModal(modal);
+      });
+    });
+
+    modal.querySelectorAll('[data-gal-modal-close]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        G5Template.closeGalModal(modal);
+      });
+    });
+  };
+
+  G5Template.initGalFloatTip = function () {
+    var tip = document.getElementById('galFloatTip');
+    var closeBtn = document.getElementById('galFloatTipClose');
+    if (!tip || !closeBtn) return;
+    closeBtn.addEventListener('click', function () {
+      tip.classList.add('is-hidden');
+    });
+  };
+
+  /* --------------------------------------------------------------------------
    * Master init
    * -------------------------------------------------------------------------- */
   G5Template.init = function () {
@@ -662,6 +754,9 @@
     G5Template.initSmoothAnchor();
     G5Template.initReveal();
     G5Template.initScrollSnap();
+    G5Template.initGalSermonModal();
+    G5Template.initGalWelcomeModal();
+    G5Template.initGalFloatTip();
   };
 
   G5Template.ready(function () {

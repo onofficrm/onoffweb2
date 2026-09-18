@@ -25,13 +25,14 @@ include_once(G5_PATH.'/head.php');
  */
 $g5_main_sections = array(
     'hero',
-    'service',
-    'advantage',
-    'portfolio',
-    'latest',   // 게시판 최신글 (story, news, sample) — section/latest.php
-    'review',
-    'faq',
-    'contact',
+    'manifesto',
+    'values',
+    'audience',
+    'sermons',
+    'pastor',
+    'online',
+    'welcome',
+    'cta',
 );
 ?>
 
