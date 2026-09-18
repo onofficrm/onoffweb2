@@ -33,8 +33,8 @@ if ($gal_logo_variant === 'dark') {
     src="<?php echo htmlspecialchars($gal_logo_src, ENT_QUOTES, 'UTF-8'); ?>"
     alt="GAL CHURCH"
     class="gal-brand-logo__img"
-    width="280"
-    height="120"
+    width="360"
+    height="150"
     decoding="async"
   >
 </span>

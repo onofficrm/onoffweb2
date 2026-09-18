@@ -146,7 +146,7 @@ if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
                 <a href="<?php echo G5_URL; ?>" class="site-header__logo-link" aria-label="<?php echo htmlspecialchars($g5_site_title, ENT_QUOTES, 'UTF-8'); ?>">
                     <?php
                     $gal_logo_variant = 'light';
-                    $gal_logo_size = 'md';
+                    $gal_logo_size = 'lg';
                     include G5_PATH.'/components/gal-logo.php';
                     ?>
                 </a>
