@@ -71,12 +71,12 @@ $g5_footer_kakao_esc = htmlspecialchars($g5_footer_kakao_url, ENT_QUOTES, 'UTF-8
         <div class="gal-footer__inner">
             <div class="gal-footer__grid">
                 <div class="gal-footer__brand">
-                    <a href="<?php echo G5_URL; ?>" class="gal-footer__logo-link">
-                        <span class="gal-footer__logo-mark" aria-hidden="true">G</span>
-                        <span>
-                            <strong class="gal-footer__logo-text font-display">GAL CHURCH</strong>
-                            <span class="gal-footer__logo-slogan font-display">GO · AWAKEN · LOVE</span>
-                        </span>
+                    <a href="<?php echo G5_URL; ?>" class="gal-footer__logo-link" aria-label="GAL CHURCH">
+                        <?php
+                        $gal_logo_variant = 'dark';
+                        $gal_logo_size = 'lg';
+                        include G5_PATH.'/components/gal-logo.php';
+                        ?>
                     </a>
                     <p class="gal-footer__tagline font-display">GO. AWAKEN. LOVE.</p>
                     <p class="gal-footer__quote">“갈 교회가 없는 시대, 우리는 갈 교회를 만들어갑니다.”</p>

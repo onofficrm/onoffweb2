@@ -143,12 +143,12 @@ if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
 
         <div class="site-header__inner">
             <div class="site-header__logo">
-                <a href="<?php echo G5_URL; ?>" class="site-header__logo-link">
-                    <?php if ($g5_logo_url) { ?>
-                    <img src="<?php echo $g5_logo_url; ?>" alt="<?php echo $g5_site_title; ?>" class="site-header__logo-img">
-                    <?php } else { ?>
-                    <span class="site-header__logo-text"><?php echo $g5_site_title; ?></span>
-                    <?php } ?>
+                <a href="<?php echo G5_URL; ?>" class="site-header__logo-link" aria-label="<?php echo htmlspecialchars($g5_site_title, ENT_QUOTES, 'UTF-8'); ?>">
+                    <?php
+                    $gal_logo_variant = 'light';
+                    $gal_logo_size = 'md';
+                    include G5_PATH.'/components/gal-logo.php';
+                    ?>
                 </a>
             </div>
 
