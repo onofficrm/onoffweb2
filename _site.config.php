@@ -19,7 +19,7 @@ $site_config = array(
     'address'             => '',
     'primary_color'       => '#073063',
     'secondary_color'     => '#64748B',
-    'logo_path'           => '/img/logo/logo.svg',
+    'logo_path'           => '/img/logo/logo.png',
     'og_image'            => '/img/common/og-image.jpg',
     /* SEO (components/seo-meta.php) */
     'seo_title'           => 'GAL CHURCH | GO. AWAKEN. LOVE.',

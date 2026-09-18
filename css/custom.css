@@ -2951,76 +2951,51 @@ body {
 .site-header__logo-img { font-family: var(--font-display); font-weight: 800; color: var(--color-navy); font-size: 1.25rem; }
 .site-header__logo-img { height: 36px; width: auto; }
 
-/* GAL brand logo — high visibility */
+/* GAL brand logo — official image (clear GAL spacing) */
 .gal-brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  line-height: 1;
+  line-height: 0;
   user-select: none;
 }
-.gal-brand-logo__mark {
+.gal-brand-logo__img {
   display: block;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
-.gal-brand-logo__mark svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.site-header__logo-link:hover .gal-brand-logo__mark,
-.gal-footer__logo-link:hover .gal-brand-logo__mark {
-  transform: scale(1.06);
-}
-.gal-brand-logo__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.2rem;
-}
-.gal-brand-logo__title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-.gal-brand-logo__slogan {
-  font-family: var(--font-display);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  line-height: 1;
-}
-.gal-brand-logo--sm .gal-brand-logo__mark { width: 2rem; height: 2rem; }
-.gal-brand-logo--sm .gal-brand-logo__title { font-size: 1.05rem; }
-.gal-brand-logo--sm .gal-brand-logo__slogan { font-size: 0.55rem; letter-spacing: 0.18em; }
-.gal-brand-logo--md .gal-brand-logo__mark { width: 2.75rem; height: 2.75rem; }
-.gal-brand-logo--md .gal-brand-logo__title { font-size: 1.35rem; }
-.gal-brand-logo--md .gal-brand-logo__slogan { font-size: 0.68rem; letter-spacing: 0.22em; }
-.gal-brand-logo--lg .gal-brand-logo__mark { width: 3.25rem; height: 3.25rem; }
-.gal-brand-logo--lg .gal-brand-logo__title { font-size: 1.65rem; }
-.gal-brand-logo--lg .gal-brand-logo__slogan { font-size: 0.75rem; letter-spacing: 0.24em; }
-.gal-brand-logo--light .gal-brand-logo__title { color: #073063; }
-.gal-brand-logo--light .gal-brand-logo__slogan { color: #0D559A; }
-.gal-brand-logo--dark .gal-brand-logo__title { color: #ffffff; }
-.gal-brand-logo--dark .gal-brand-logo__slogan { color: #38BDF8; }
+.gal-brand-logo--sm .gal-brand-logo__img { height: 40px; width: auto; }
+.gal-brand-logo--md .gal-brand-logo__img { height: 52px; width: auto; }
+.gal-brand-logo--lg .gal-brand-logo__img { height: 64px; width: auto; }
 .site-header__logo-link {
-  padding: 0.15rem 0;
+  padding: 0.2rem 0;
 }
-.site-header__logo-link:hover {
-  opacity: 1;
+.site-header__logo-link:hover .gal-brand-logo__img {
+  opacity: 0.92;
+}
+.gal-footer__logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.96);
+}
+.gal-footer__logo-link:hover {
+  background: #fff;
+}
+.gal-footer__logo-mark,
+.gal-footer__logo-text,
+.gal-footer__logo-slogan {
+  display: none;
 }
 @media (min-width: 1025px) {
-  .gal-brand-logo--md .gal-brand-logo__mark { width: 3rem; height: 3rem; }
-  .gal-brand-logo--md .gal-brand-logo__title { font-size: 1.5rem; }
-  .gal-brand-logo--md .gal-brand-logo__slogan { font-size: 0.72rem; }
+  .gal-brand-logo--md .gal-brand-logo__img { height: 58px; }
 }
 @media (max-width: 640px) {
-  .gal-brand-logo--md .gal-brand-logo__mark { width: 2.35rem; height: 2.35rem; }
-  .gal-brand-logo--md .gal-brand-logo__title { font-size: 1.15rem; }
-  .gal-brand-logo--md .gal-brand-logo__slogan { font-size: 0.55rem; letter-spacing: 0.14em; }
-  .gal-brand-logo { gap: 0.55rem; }
+  .gal-brand-logo--md .gal-brand-logo__img { height: 44px; }
+  .gal-brand-logo--lg .gal-brand-logo__img { height: 52px; }
 }
 .site-header__gnb-list { display: flex; align-items: center; gap: 0.15rem; list-style: none; margin: 0; padding: 0; }
 .site-header__gnb-link {
