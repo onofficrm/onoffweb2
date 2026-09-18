@@ -2905,8 +2905,20 @@ body {
   border: 1px solid transparent; text-decoration: none; cursor: pointer;
   transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
-.gal-btn--primary { background: var(--color-navy); color: #fff; box-shadow: var(--shadow-xs); }
-.gal-btn--primary:hover { background: var(--color-blue); color: #fff; }
+.site-main .gal-btn--primary,
+.page-template .gal-btn--primary {
+  background: #198AD6;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 5px 16px rgba(25, 138, 214, 0.25);
+}
+.site-main .gal-btn--primary:hover,
+.site-main .gal-btn--primary:focus,
+.page-template .gal-btn--primary:hover,
+.page-template .gal-btn--primary:focus {
+  background: #0D559A;
+  color: #fff;
+}
 .gal-btn--ghost { background: #fff; color: var(--color-navy); border-color: #e2e8f0; }
 .gal-btn--ghost:hover { background: #f8fafc; border-color: #cbd5e1; }
 .gal-btn--light { background: #fff; color: var(--color-navy); font-weight: 700; box-shadow: var(--shadow-soft); }
@@ -2915,7 +2927,10 @@ body {
 .gal-btn--kakao:hover { background: #FADA0A; }
 .gal-btn--lg { padding: 1rem 2rem; font-size: 1.05rem; }
 .gal-btn__icon { color: var(--color-bright); font-size: 0.7rem; }
-.gal-btn--primary:hover .gal-btn__icon { color: #fff; }
+.site-main .gal-btn--primary .gal-btn__icon,
+.page-template .gal-btn--primary .gal-btn__icon {
+  color: #fff;
+}
 .gal-link {
   display: inline-flex; align-items: center; gap: 0.35rem;
   font-size: 0.9rem; font-weight: 700; color: var(--color-navy); text-decoration: none;
