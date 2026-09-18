@@ -63,8 +63,8 @@ if (!isset($gal_latest_sermons) || !is_array($gal_latest_sermons)) {
 
 if (!isset($gal_nav_fallback) || !is_array($gal_nav_fallback)) {
     $gal_nav_fallback = array(
-        array(
-            'name' => 'GAL CHURCH',
+                array(
+            'name' => '교회 소개',
             'link' => gal_page_url('about'),
             'sub'  => array(
                 array('name' => '교회 소개', 'link' => gal_page_url('about', 'intro')),
