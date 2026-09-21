@@ -91,14 +91,6 @@ if (!isset($gal_nav_fallback) || !is_array($gal_nav_fallback)) {
             ),
         ),
         array(
-            'name' => '다음세대',
-            'link' => gal_page_url('nextgen'),
-            'sub'  => array(
-                array('name' => '다음세대 소개', 'link' => gal_page_url('nextgen', 'intro')),
-                array('name' => '교육', 'link' => gal_page_url('nextgen', 'education')),
-            ),
-        ),
-        array(
             'name' => '공동체',
             'link' => gal_page_url('community'),
             'sub'  => array(
@@ -139,6 +131,25 @@ if (!isset($gal_nav_fallback) || !is_array($gal_nav_fallback)) {
             ),
         ),
     );
+}
+
+if (!function_exists('gal_filter_hidden_menus')) {
+    function gal_filter_hidden_menus($menus)
+    {
+        if (!is_array($menus)) {
+            return $menus;
+        }
+        $hidden = array('다음세대');
+        $out = array();
+        foreach ($menus as $row) {
+            $name = isset($row['me_name']) ? trim($row['me_name']) : '';
+            if ($name !== '' && in_array($name, $hidden, true)) {
+                continue;
+            }
+            $out[] = $row;
+        }
+        return $out;
+    }
 }
 
 if (!function_exists('gal_notice_menu_row')) {

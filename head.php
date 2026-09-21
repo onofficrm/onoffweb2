@@ -126,6 +126,10 @@ $gal_mo_copied = !is_array($menu_datas_mo) || !count($menu_datas_mo);
 if ($gal_mo_copied) {
     $menu_datas_mo = $menu_datas_pc;
 }
+if (function_exists('gal_filter_hidden_menus')) {
+    $menu_datas_pc = gal_filter_hidden_menus($menu_datas_pc);
+    $menu_datas_mo = gal_filter_hidden_menus($menu_datas_mo);
+}
 if (function_exists('gal_inject_notice_menu')) {
     if (is_array($menu_datas_pc) && count($menu_datas_pc)) {
         $menu_datas_pc = gal_inject_notice_menu($menu_datas_pc);
