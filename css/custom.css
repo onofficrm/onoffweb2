@@ -3313,7 +3313,7 @@ body {
 
 /* ----- Online ----- */
 .site-main .gal-online {
-  background: #073063;
+  background: linear-gradient(135deg, #0D559A 0%, #126FB4 55%, #198AD6 100%);
   color: #fff;
   overflow: hidden;
   margin: 2rem 0; padding: 5rem 0 !important;
@@ -3336,6 +3336,15 @@ body {
 .site-main .gal-online__copy { margin: 1.5rem auto 0; max-width: 32rem; color: #f1f5f9; font-size: 1.05rem; line-height: 1.7; }
 .site-main .gal-online__emphasis { margin-top: 0.75rem; color: #bae6fd; font-weight: 600; }
 .gal-online .gal-btn { margin-top: 2rem; }
+.site-main .gal-online .gal-btn--light {
+  background: #fff;
+  color: #073063;
+}
+.site-main .gal-online .gal-btn--light:hover,
+.site-main .gal-online .gal-btn--light:focus {
+  background: #e0f2fe;
+  color: #073063;
+}
 
 /* ----- Welcome / CTA ----- */
 .gal-welcome__panel {
