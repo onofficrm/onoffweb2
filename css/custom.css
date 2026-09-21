@@ -3312,8 +3312,10 @@ body {
 .gal-pastor__copy .gal-btn { margin-top: 1.25rem; }
 
 /* ----- Online ----- */
-.gal-online {
-  background: var(--color-navy); color: #fff; overflow: hidden;
+.site-main .gal-online {
+  background: #073063;
+  color: #fff;
+  overflow: hidden;
   margin: 2rem 0; padding: 5rem 0 !important;
 }
 .gal-online__glow { position: absolute; width: 24rem; height: 24rem; border-radius: 50%; filter: blur(60px); pointer-events: none; }
@@ -3326,12 +3328,13 @@ body {
   background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; color: #bae6fd; text-transform: uppercase;
 }
-.gal-online__title {
+.site-main .gal-online__title {
   margin: 1.5rem 0 0; font-size: clamp(1.85rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.25; letter-spacing: -0.02em;
+  color: #fff;
 }
-.gal-online__title span { color: #38BDF8; }
-.gal-online__copy { margin: 1.5rem auto 0; max-width: 32rem; color: #e2e8f0; font-size: 1.05rem; line-height: 1.7; }
-.gal-online__emphasis { margin-top: 0.75rem; color: #e0f2fe; font-weight: 500; }
+.site-main .gal-online__title span { color: #38BDF8; }
+.site-main .gal-online__copy { margin: 1.5rem auto 0; max-width: 32rem; color: #f1f5f9; font-size: 1.05rem; line-height: 1.7; }
+.site-main .gal-online__emphasis { margin-top: 0.75rem; color: #bae6fd; font-weight: 600; }
 .gal-online .gal-btn { margin-top: 2rem; }
 
 /* ----- Welcome / CTA ----- */
