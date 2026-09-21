@@ -3287,6 +3287,9 @@ body {
   background: linear-gradient(180deg, #073063, #0D559A, #073063); color: #fff;
   display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; text-align: center;
 }
+.gal-pastor-card__fallback[hidden] {
+  display: none !important;
+}
 .gal-pastor-card__fallback-top {
   display: flex; justify-content: space-between;
   font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #bae6fd; text-transform: uppercase;
