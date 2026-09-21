@@ -3313,8 +3313,8 @@ body {
 
 /* ----- Online ----- */
 .site-main .gal-online {
-  background: linear-gradient(135deg, #0D559A 0%, #126FB4 55%, #198AD6 100%);
-  color: #fff;
+  background: linear-gradient(135deg, #DCEFFA 0%, #C6E5F7 55%, #A9D8F3 100%);
+  color: #073063;
   overflow: hidden;
   margin: 2rem 0; padding: 5rem 0 !important;
 }
@@ -3328,17 +3328,24 @@ body {
   background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; color: #bae6fd; text-transform: uppercase;
 }
+.site-main .gal-online__badge {
+  background: rgba(255, 255, 255, 0.68);
+  border-color: rgba(7, 48, 99, 0.1);
+  color: #0D559A;
+}
 .site-main .gal-online__title {
   margin: 1.5rem 0 0; font-size: clamp(1.85rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.25; letter-spacing: -0.02em;
-  color: #fff;
+  color: #073063;
 }
-.site-main .gal-online__title span { color: #38BDF8; }
-.site-main .gal-online__copy { margin: 1.5rem auto 0; max-width: 32rem; color: #f1f5f9; font-size: 1.05rem; line-height: 1.7; }
-.site-main .gal-online__emphasis { margin-top: 0.75rem; color: #bae6fd; font-weight: 600; }
+.site-main .gal-online__title span { color: #0D72B8; }
+.site-main .gal-online__copy { margin: 1.5rem auto 0; max-width: 32rem; color: #234A6B; font-size: 1.05rem; line-height: 1.7; }
+.site-main .gal-online__emphasis { margin-top: 0.75rem; color: #0D559A; font-weight: 700; }
 .gal-online .gal-btn { margin-top: 2rem; }
 .site-main .gal-online .gal-btn--light {
   background: #fff;
   color: #073063;
+  border-color: rgba(7, 48, 99, 0.12);
+  box-shadow: 0 5px 18px rgba(7, 48, 99, 0.12);
 }
 .site-main .gal-online .gal-btn--light:hover,
 .site-main .gal-online .gal-btn--light:focus {
