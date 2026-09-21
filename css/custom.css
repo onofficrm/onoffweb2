@@ -3274,18 +3274,6 @@ body {
   position: relative; aspect-ratio: 3/4; border-radius: 1.5rem; overflow: hidden;
   border: 1px solid rgba(226,232,240,0.9); padding: 0.5rem; background: #fff; box-shadow: var(--shadow-soft);
 }
-.gal-pastor-card__frame::after {
-  content: "";
-  position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  left: 0.5rem;
-  z-index: 1;
-  height: 0.65rem;
-  border-radius: 0 0 1rem 1rem;
-  background: #fff;
-  pointer-events: none;
-}
 .gal-pastor-card__img {
   display: block;
   width: 100%;
@@ -3315,7 +3303,6 @@ body {
 .gal-pastor-card__fallback-quote { margin: 0; font-size: 0.7rem; color: rgba(224,242,254,0.85); line-height: 1.5; }
 .gal-pastor-card__tag {
   position: absolute; bottom: 1rem; left: 1rem;
-  z-index: 2;
   padding: 0.25rem 0.75rem; border-radius: var(--radius-full);
   background: rgba(0,0,0,0.45); color: #fff; font-size: 0.7rem; font-weight: 500;
 }

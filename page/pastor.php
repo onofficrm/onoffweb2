@@ -25,7 +25,7 @@ g5_page_start('목회자 소개');
         <div class="gal-pastor-card__frame">
           <img
             class="gal-pastor-card__img"
-            src="<?php echo G5_URL; ?>/img/main/pastor-profile.png"
+            src="<?php echo G5_URL; ?>/img/main/pastor-profile-v2.png"
             alt="이대희 목사"
             width="388"
             height="525"
