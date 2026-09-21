@@ -1,0 +1,6 @@
+{
+  "name": "GAL CHURCH",
+  "description": "GAL교회는 온라인에서 만나고, 말씀으로 깨어나며, 사랑으로 세상에 나아가는 교회입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

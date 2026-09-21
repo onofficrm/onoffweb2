@@ -122,8 +122,19 @@ if (function_exists('g5site_cfg')) {
 // 메뉴 (PC / 모바일)
 $menu_datas_pc = get_menu_db(0, true);
 $menu_datas_mo = get_menu_db(1, true);
-if (!is_array($menu_datas_mo) || !count($menu_datas_mo)) {
+$gal_mo_copied = !is_array($menu_datas_mo) || !count($menu_datas_mo);
+if ($gal_mo_copied) {
     $menu_datas_mo = $menu_datas_pc;
+}
+if (function_exists('gal_inject_notice_menu')) {
+    if (is_array($menu_datas_pc) && count($menu_datas_pc)) {
+        $menu_datas_pc = gal_inject_notice_menu($menu_datas_pc);
+    }
+    if ($gal_mo_copied) {
+        $menu_datas_mo = $menu_datas_pc;
+    } elseif (is_array($menu_datas_mo) && count($menu_datas_mo)) {
+        $menu_datas_mo = gal_inject_notice_menu($menu_datas_mo);
+    }
 }
 ?>
 

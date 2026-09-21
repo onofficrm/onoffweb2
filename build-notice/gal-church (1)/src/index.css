@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Manrope', 'Pretendard', sans-serif;
+  --color-navy: #073063;
+  --color-blue: #0D559A;
+  --color-bright: #198AD6;
+  --color-dark: #0F172A;
+  --color-sub: #64748B;
+  --color-canvas: #F6F8FB;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #F6F8FB;
+  color: #0F172A;
+  overflow-x: hidden;
+  word-break: keep-all;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+

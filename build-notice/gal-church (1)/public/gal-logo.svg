@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none">
+  <!-- GAL Symbol: G (Go), A (Awaken), L (Love) Geometric Trinity -->
+  <g transform="translate(10, 10)">
+    <!-- G: Dynamic Forward Arc (Navy #073063) -->
+    <path d="M40 8C22.327 8 8 22.327 8 40C8 57.673 22.327 72 40 72C52.484 72 63.308 64.846 68.74 54.5H46V42.5H80C80.66 46.5 81 50.7 81 55C81 74.33 62.63 90 40 90C12.386 90 -10 67.614 -10 40C-10 12.386 12.386 -10 40 -10C56.2 10 70 19 76 29L64 36C59 28 50 20 40 20Z" fill="#073063" opacity="0"/>
+    
+    <!-- Stylized Modern Geometric Monogram -->
+    <!-- Arc 1: Go (Forward movement) -->
+    <path d="M12 40C12 24.536 24.536 12 40 12C48.5 12 56 15.8 61 21.8L51.5 29.5C48.5 25.8 44.5 23.5 40 23.5C30.887 23.5 23.5 30.887 23.5 40C23.5 49.113 30.887 56.5 40 56.5C46.2 56.5 51.5 53 54.2 48H38V37.5H65.5C65.8 39 66 40.5 66 42C66 56.359 54.359 68 40 68C24.536 68 12 55.464 12 40Z" fill="#073063"/>
+    
+    <!-- Arc 2: Awaken (Upward Peak / Light) -->
+    <path d="M43 14L63 56H50.5L46.8 47.8H39.2L35.5 56H23L43 14ZM43 27.5L41 38.5H45L43 27.5Z" fill="#0D559A" opacity="0.95"/>
+    
+    <!-- Arc 3: Love (Embracing Base & Foundation) -->
+    <path d="M57 14H68.5V47.5C68.5 53.3 73.2 58 79 58H88V68H79C66.85 68 57 58.15 57 46V14Z" fill="#198AD6"/>
+    
+    <!-- Accent Spark: Awaken Star / Light point -->
+    <circle cx="43" cy="10" r="3.5" fill="#198AD6" />
+  </g>
+
+  <!-- Typography -->
+  <text x="110" y="47" font-family="'Manrope', 'Pretendard', sans-serif" font-weight="800" font-size="28" letter-spacing="0.08em" fill="#073063">GAL CHURCH</text>
+  <text x="111" y="68" font-family="'Manrope', 'Pretendard', sans-serif" font-weight="600" font-size="11.5" letter-spacing="0.28em" fill="#198AD6">GO · AWAKEN · LOVE</text>
+</svg>
