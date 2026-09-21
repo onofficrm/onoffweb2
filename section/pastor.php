@@ -8,7 +8,15 @@ include_once(G5_PATH.'/section/_gal_data.php');
       <div class="gal-pastor__photo">
         <div class="gal-pastor-card">
           <div class="gal-pastor-card__frame">
-            <div class="gal-pastor-card__fallback">
+            <img
+              class="gal-pastor-card__img"
+              src="<?php echo G5_URL; ?>/img/main/pastor-profile.png"
+              alt="이대희 목사"
+              width="388"
+              height="525"
+              loading="lazy"
+              onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
+            <div class="gal-pastor-card__fallback" hidden>
               <div class="gal-pastor-card__fallback-top">
                 <span>GAL CHURCH</span><span>LEADERSHIP</span>
               </div>

@@ -25,10 +25,12 @@ g5_page_start('목회자 소개');
         <div class="gal-pastor-card__frame">
           <img
             class="gal-pastor-card__img"
-            src="<?php echo G5_URL; ?>/img/main/pastor-placeholder.svg"
+            src="<?php echo G5_URL; ?>/img/main/pastor-profile.png"
             alt="이대희 목사"
+            width="388"
+            height="525"
             loading="lazy"
-            onerror="this.classList.add('is-hidden');this.nextElementSibling.hidden=false;">
+            onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
           <div class="gal-pastor-card__fallback" hidden>
             <div class="gal-pastor-card__fallback-top">
               <span>GAL CHURCH</span>
