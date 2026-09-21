@@ -140,6 +140,16 @@ if (function_exists('gal_inject_notice_menu')) {
         $menu_datas_mo = gal_inject_notice_menu($menu_datas_mo);
     }
 }
+if (function_exists('gal_inject_member_menu')) {
+    if (is_array($menu_datas_pc) && count($menu_datas_pc)) {
+        $menu_datas_pc = gal_inject_member_menu($menu_datas_pc);
+    }
+    if ($gal_mo_copied) {
+        $menu_datas_mo = $menu_datas_pc;
+    } elseif (is_array($menu_datas_mo) && count($menu_datas_mo)) {
+        $menu_datas_mo = gal_inject_member_menu($menu_datas_mo);
+    }
+}
 ?>
 
 <!-- 상단 시작 { -->

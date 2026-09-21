@@ -130,6 +130,16 @@ if (!isset($gal_nav_fallback) || !is_array($gal_nav_fallback)) {
                 array('name' => '카카오톡 연결', 'link' => gal_page_url('counseling', 'kakao')),
             ),
         ),
+        array(
+            'name' => '회원',
+            'link' => gal_bbs_url('register.php'),
+            'sub'  => array(
+                array('name' => '회원가입', 'link' => gal_bbs_url('register.php')),
+                array('name' => '로그인', 'link' => gal_bbs_url('login.php')),
+                array('name' => '아이디/비밀번호 찾기', 'link' => gal_bbs_url('password_lost.php')),
+                array('name' => '정보수정', 'link' => gal_bbs_url('member_confirm.php').'?url='.rawurlencode(gal_bbs_url('register_form.php'))),
+            ),
+        ),
     );
 }
 
@@ -204,5 +214,54 @@ if (!function_exists('gal_notice_menu_row')) {
             $out[] = $notice;
         }
         return $out;
+    }
+}
+
+if (!function_exists('gal_member_menu_row')) {
+    function gal_member_menu_row()
+    {
+        $confirm = gal_bbs_url('member_confirm.php').'?url='.rawurlencode(gal_bbs_url('register_form.php'));
+        return array(
+            'me_name'   => '회원',
+            'me_link'   => gal_bbs_url('register.php'),
+            'me_target' => 'self',
+            'sub'       => array(
+                array(
+                    'me_name'   => '회원가입',
+                    'me_link'   => gal_bbs_url('register.php'),
+                    'me_target' => 'self',
+                ),
+                array(
+                    'me_name'   => '로그인',
+                    'me_link'   => gal_bbs_url('login.php'),
+                    'me_target' => 'self',
+                ),
+                array(
+                    'me_name'   => '아이디/비밀번호 찾기',
+                    'me_link'   => gal_bbs_url('password_lost.php'),
+                    'me_target' => 'self',
+                ),
+                array(
+                    'me_name'   => '정보수정',
+                    'me_link'   => $confirm,
+                    'me_target' => 'self',
+                ),
+            ),
+        );
+    }
+
+    function gal_inject_member_menu($menus)
+    {
+        if (!is_array($menus) || !count($menus)) {
+            return $menus;
+        }
+        foreach ($menus as $row) {
+            $name = isset($row['me_name']) ? trim($row['me_name']) : '';
+            if ($name === '회원' || $name === '회원가입') {
+                return $menus;
+            }
+        }
+        $menus[] = gal_member_menu_row();
+        return $menus;
     }
 }
