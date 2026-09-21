@@ -51,7 +51,7 @@
   /* Layout */
   --container: 1280px;
   --container-padding: 1.5rem;
-  --header-height: 82px;
+  --header-height: 76px;
   --section-padding-y: 5rem;
   --section-gap: 2rem;
 
@@ -1382,7 +1382,7 @@
     --section-padding-y: 4rem;
     --font-size-3xl: 1.75rem;
     --font-size-4xl: 2rem;
-    --header-height: 74px;
+    --header-height: 68px;
   }
 
   .site-main .card-grid,
@@ -1399,7 +1399,7 @@
     --font-size-3xl: 1.5rem;
     --font-size-4xl: 1.75rem;
     --font-size-lg: 1rem;
-    --header-height: 64px;
+    --header-height: 60px;
     --card-padding: var(--space-lg);
   }
 
@@ -2991,10 +2991,10 @@ body {
   width: 105px;
 }
 .gal-brand-logo--md .gal-brand-logo__img {
-  width: 140px;
+  width: 125px;
 }
 .gal-brand-logo--lg .gal-brand-logo__img {
-  width: 160px;
+  width: 145px;
 }
 .site-header__logo-link {
   display: inline-flex;
@@ -3029,10 +3029,10 @@ body {
     margin-left: clamp(7rem, 13vw, 12rem);
   }
   .gal-brand-logo--md .gal-brand-logo__img {
-    width: 155px;
+    width: 140px;
   }
   .gal-brand-logo--lg .gal-brand-logo__img {
-    width: 175px;
+    width: 155px;
   }
 }
 @media (max-width: 640px) {
@@ -3040,10 +3040,10 @@ body {
     margin-left: 0;
   }
   .gal-brand-logo--md .gal-brand-logo__img {
-    width: 110px;
+    width: 100px;
   }
   .gal-brand-logo--lg .gal-brand-logo__img {
-    width: 125px;
+    width: 112px;
   }
 }
 .site-header__gnb-list { display: flex; align-items: center; gap: 0.15rem; list-style: none; margin: 0; padding: 0; }
