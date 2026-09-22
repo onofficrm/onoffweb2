@@ -2976,8 +2976,38 @@ body {
   text-decoration: underline;
   text-decoration-color: var(--color-bright);
   text-underline-offset: 4px;
-  color: #fff;
+  color: var(--color-bright);
   font-weight: 800;
+}
+.gal-panel--navy .gal-underline,
+.gal-card--brand .gal-underline,
+.gal-card__text--invert .gal-underline {
+  color: #fff;
+  text-decoration-color: #7dd3fc;
+}
+
+/* About brand story card */
+.page-about .gal-card--brand {
+  background: linear-gradient(135deg, #073063, #0D559A 55%, #198AD6);
+  border: none;
+  color: #fff;
+}
+.page-about .gal-card__headline--invert {
+  margin: 0;
+  font-size: clamp(1.2rem, 3.5vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #fff;
+}
+.page-about .gal-card__text--invert {
+  margin: 1.25rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: #e0f2fe;
+}
+.page-about .gal-card__text--invert .gal-underline {
+  color: #fff;
 }
 
 .gal-btn {
