@@ -118,7 +118,7 @@ g5_page_start('교회 소개');
     <div class="gal-section__head gal-section__head--center">
       <span class="gal-eyebrow">JOURNEY</span>
       <h2 class="gal-section__title">GAL WAY</h2>
-      <p class="gal-section__desc">온라인에서 시작되어 세상 속 삶의 자리로 확장되는 3단계 여정</p>
+      <p class="gal-section__desc">온라인에서 시작되어 세상 속 삶의 자리로<br>확장되는 3단계 여정</p>
     </div>
     <div class="gal-journey">
       <div class="gal-journey__line" aria-hidden="true"></div>
