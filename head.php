@@ -269,9 +269,9 @@ if (function_exists('gal_inject_member_menu')) {
 
                 <a href="<?php echo htmlspecialchars($g5_inquiry_url, ENT_QUOTES, 'UTF-8'); ?>" class="btn btn-primary site-header__cta gal-header-cta"<?php echo $g5_cta_is_external ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>><?php echo get_text($g5_consult_label); ?></a>
 
-                <button type="button" class="site-header__menu-btn" aria-controls="siteMobileNav" aria-expanded="false" title="전체메뉴">
+                <button type="button" class="site-header__menu-btn" aria-controls="siteMobileNav" aria-expanded="false" title="전체메뉴" aria-label="전체메뉴 열기">
                     <i class="fa fa-bars" aria-hidden="true"></i>
-                    <span class="sound_only">전체메뉴열기</span>
+                    <span class="site-header__menu-btn-label">메뉴</span>
                 </button>
             </div>
         </div>
