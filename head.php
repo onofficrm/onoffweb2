@@ -49,10 +49,9 @@ add_stylesheet('<link rel="preconnect" href="https://fonts.gstatic.com" crossori
 add_stylesheet('<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">', 8);
 
 // 템플릿 전용 CSS/JS (default.css·common.js 이후 로드)
-add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/custom.css">', 10);
-if ($g5_css_brand !== '') {
-    add_stylesheet('<style>:root{'.$g5_css_brand.'}</style>', 11);
-}
+$g5_custom_css_path = G5_CSS_PATH.'/custom.css';
+$g5_custom_css_ver = is_file($g5_custom_css_path) ? '?v='.filemtime($g5_custom_css_path) : '';
+add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/custom.css'.$g5_custom_css_ver.'">', 10);
 if (is_file(G5_LIB_PATH.'/icrm.lib.php')) {
     include_once G5_LIB_PATH.'/icrm.lib.php';
     if (function_exists('icrm_enqueue_board_assets')) {
@@ -117,6 +116,9 @@ if (function_exists('g5site_cfg')) {
     if ($g5_secondary !== '' && preg_match('/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$/', $g5_secondary)) {
         $g5_css_brand .= '--color-secondary:'.$g5_secondary.';--color-muted:'.$g5_secondary.';';
     }
+}
+if ($g5_css_brand !== '') {
+    add_stylesheet('<style>:root{'.$g5_css_brand.'}</style>', 11);
 }
 
 // 메뉴 (PC / 모바일)
