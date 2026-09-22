@@ -1843,24 +1843,24 @@
   }
 
   .site-header__inner {
-    padding-right: 1.75rem;
+    padding-right: 2.5rem !important;
   }
 
   .site-header__menu-btn {
     display: inline-flex !important;
-    gap: 0.6rem !important;
-    min-height: 56px !important;
-    margin-right: 1.75rem !important;
-    padding: 0.8rem 1.4rem !important;
-    border: 1.5px solid #cbd5e1 !important;
+    gap: 0.65rem !important;
+    min-height: 58px !important;
+    margin-right: 2.5rem !important;
+    padding: 0.85rem 1.5rem !important;
+    border: 1.5px solid #94a3b8 !important;
     background: #fff !important;
-    font-size: 1.45rem !important;
+    font-size: 1.55rem !important;
     font-weight: 800 !important;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.1) !important;
   }
 
   .site-header__menu-btn .fa {
-    font-size: 1.65rem !important;
+    font-size: 1.75rem !important;
   }
 
   .site-header .site-header__cta,
@@ -1871,16 +1871,18 @@
 
 @media (max-width: 480px) {
   .site-header__inner {
-    padding-right: 1.25rem;
+    padding-right: 2rem !important;
   }
 
   .site-header__menu-btn {
-    margin-right: 1.25rem !important;
-    font-size: 1.35rem !important;
+    margin-right: 2rem !important;
+    min-height: 54px !important;
+    padding: 0.8rem 1.35rem !important;
+    font-size: 1.5rem !important;
   }
 
   .site-header__menu-btn .fa {
-    font-size: 1.5rem !important;
+    font-size: 1.7rem !important;
   }
 }
 
