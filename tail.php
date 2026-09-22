@@ -41,7 +41,7 @@ $g5_footer_kakao_esc = htmlspecialchars($g5_footer_kakao_url, ENT_QUOTES, 'UTF-8
 ?>
 
     </div>
-    <div id="aside" class="site-aside">
+    <div id="aside" class="site-aside is-sr-only" aria-hidden="true">
         <div class="site-g5-widgets site-g5-widgets--aside">
             <?php echo outlogin(); ?>
             <?php echo poll(); ?>

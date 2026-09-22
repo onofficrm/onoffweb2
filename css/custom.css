@@ -1916,7 +1916,8 @@
    그누보드 위젯 — 메인에서 숨김 (기능 호출은 tail.php 유지)
    ========================================================================== */
 html.page-index .site-aside,
-html.page-index .site-g5-widgets--tail {
+html.page-index .site-g5-widgets--tail,
+html.page-sub .site-aside {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1928,24 +1929,15 @@ html.page-index .site-g5-widgets--tail {
   border: 0;
 }
 
-html.page-sub .site-aside {
+html.page-sub #container_wr {
   display: block;
 }
 
-html.page-sub #container_wr {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xl);
-}
-
 html.page-sub #container {
-  flex: 1;
+  float: none;
+  width: 100%;
+  max-width: none;
   min-width: 0;
-}
-
-html.page-sub .site-aside {
-  flex: 0 0 260px;
-  max-width: 100%;
 }
 
 /* 메인/서브 표시 제어 */
@@ -2936,10 +2928,17 @@ body {
   width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0); border: 0;
 }
+/* 그누보드 사이드 로그인/설문 — GAL 헤더에 계정 메뉴가 있어 화면에서 숨김 */
+#aside.site-aside {
+  display: none !important;
+}
 .page-index #aside,
+.page-sub #aside,
 .page-index #container_title { display: none !important; }
 .page-index #container_wr,
-.page-index #container { width: 100%; max-width: none; float: none; padding: 0; margin: 0; }
+.page-index #container,
+.page-sub #container_wr,
+.page-sub #container { width: 100%; max-width: none; float: none; padding: 0; margin: 0; }
 .page-index #wrapper { background: var(--color-canvas); }
 
 /* ----- Shared ----- */
