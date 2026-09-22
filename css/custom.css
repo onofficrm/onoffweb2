@@ -3073,27 +3073,7 @@ body {
 }
 .site-header__gnb-sub-link:hover { background: var(--color-canvas); color: var(--color-navy); }
 .site-header__utils { display: flex; align-items: center; gap: 0.75rem; }
-.site-header__account {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.75rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.site-header__account a {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #475569;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.site-header__account a:hover { color: var(--color-navy); }
-.site-header__account .tnb_admin a { color: var(--color-blue); }
-@media (max-width: 1024px) {
-  .site-header__account { display: none; }
-}
+.site-header__account { display: none; }
 .gal-header-cta {
   border-radius: var(--radius-full) !important;
   background: var(--color-navy) !important; border: none !important;
