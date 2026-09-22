@@ -3005,6 +3005,33 @@ body {
 .gal-btn--ghost:hover { background: #f8fafc; border-color: #cbd5e1; }
 .gal-btn--light { background: #fff; color: var(--color-navy); font-weight: 700; box-shadow: var(--shadow-soft); }
 .gal-btn--light:hover { background: #f1f5f9; }
+/* .page-template a { color: inherit } 보다 우선 — 흰 배경 버튼 글씨가 안 보이던 문제 */
+.site-main a.gal-btn--light,
+.page-template a.gal-btn--light,
+.site-main a.gal-btn--ghost,
+.page-template a.gal-btn--ghost {
+  color: var(--color-navy);
+}
+.site-main a.gal-btn--light:hover,
+.site-main a.gal-btn--light:focus,
+.page-template a.gal-btn--light:hover,
+.page-template a.gal-btn--light:focus,
+.site-main a.gal-btn--ghost:hover,
+.site-main a.gal-btn--ghost:focus,
+.page-template a.gal-btn--ghost:hover,
+.page-template a.gal-btn--ghost:focus {
+  color: var(--color-navy);
+}
+.site-main a.gal-btn--kakao,
+.page-template a.gal-btn--kakao {
+  color: #191919;
+}
+.site-main a.gal-btn--kakao:hover,
+.site-main a.gal-btn--kakao:focus,
+.page-template a.gal-btn--kakao:hover,
+.page-template a.gal-btn--kakao:focus {
+  color: #191919;
+}
 .gal-btn--kakao { background: #FEE500; color: #191919; font-weight: 700; }
 .gal-btn--kakao:hover { background: #FADA0A; }
 .gal-btn--lg { padding: 1rem 2rem; font-size: 1.05rem; }
@@ -3858,6 +3885,10 @@ body {
 }
 .page-pastor .gal-slogan--light { color: rgba(224,242,254,0.95); }
 .page-pastor .gal-brand-band .gal-btn { margin-top: 1.75rem; }
+.page-pastor .gal-brand-band a.gal-btn--light,
+.page-pastor .gal-brand-band a.gal-btn--light span {
+  color: #073063;
+}
 
 @media (max-width: 640px) {
   .page-pastor .gal-grid--4 { grid-template-columns: 1fr; }
