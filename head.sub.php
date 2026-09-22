@@ -42,8 +42,10 @@ header("Pragma: no-cache"); // HTTP/1.0
 <head>
 <meta charset="utf-8">
 <?php
+// 반응형: 모바일 전용 테마를 꺼도 viewport는 필수 (없으면 폰에서 PC 화면처럼 축소됨)
+echo '<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0,viewport-fit=cover">'.PHP_EOL;
+
 if (G5_IS_MOBILE) {
-    echo '<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">'.PHP_EOL;
     echo '<meta name="HandheldFriendly" content="true">'.PHP_EOL;
     echo '<meta name="format-detection" content="telephone=no">'.PHP_EOL;
 } else {
