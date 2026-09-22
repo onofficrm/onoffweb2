@@ -1380,8 +1380,8 @@
   :root {
     --container-padding: 1.25rem;
     --section-padding-y: 4rem;
-    --font-size-3xl: 2rem;
-    --font-size-4xl: 2.4rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-4xl: 2rem;
     --header-height: 68px;
   }
 
@@ -1391,18 +1391,11 @@
   }
 }
 
-/* Mobile — 768px 이하: 가독성 위해 글씨 확대 */
+/* Mobile — 768px 이하 */
 @media (max-width: 768px) {
   :root {
-    --container-padding: 1.1rem;
+    --container-padding: 1rem;
     --section-padding-y: 3rem;
-    --font-size-sm: 1rem;
-    --font-size-base: 1.125rem;
-    --font-size-lg: 1.25rem;
-    --font-size-xl: 1.45rem;
-    --font-size-2xl: 1.75rem;
-    --font-size-3xl: 2.1rem;
-    --font-size-4xl: 2.4rem;
     --header-height: 60px;
     --card-padding: var(--space-lg);
   }
@@ -1439,9 +1432,7 @@
     --section-padding-y: 2.5rem;
     --section-gap: 1.5rem;
     --btn-padding-x: 1.25rem;
-    --btn-padding-y: 0.75rem;
-    --font-size-2xl: 1.65rem;
-    --font-size-3xl: 2rem;
+    --btn-padding-y: 0.625rem;
   }
 }
 
@@ -2925,15 +2916,15 @@ body {
 .gal-eyebrow {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-bright);
 }
 .gal-heading {
   margin: 0.5rem 0 0;
-  font-size: clamp(1.95rem, 4.8vw, 2.65rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -2943,7 +2934,7 @@ body {
 .gal-desc {
   margin: 0.75rem 0 0;
   color: var(--color-muted);
-  font-size: 1.125rem;
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 .gal-section-head { text-align: center; max-width: 40rem; margin: 0 auto 3rem; }
@@ -2962,8 +2953,8 @@ body {
 
 .gal-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-  min-height: 50px; padding: 0.9rem 1.65rem;
-  border-radius: var(--radius-full); font-weight: 600; font-size: 1.1rem;
+  min-height: 48px; padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-full); font-weight: 600; font-size: 0.95rem;
   border: 1px solid transparent; text-decoration: none; cursor: pointer;
   transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
@@ -3234,7 +3225,7 @@ body {
 @keyframes gal-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
 .gal-hero__copy { text-align: center; max-width: 52rem; margin: auto; }
 .gal-hero__title {
-  margin: 0; font-size: clamp(2.15rem, 5.8vw, 3.85rem); font-weight: 800;
+  margin: 0; font-size: clamp(1.85rem, 5vw, 3.75rem); font-weight: 800;
   color: var(--color-navy); letter-spacing: -0.03em; line-height: 1.18;
 }
 .gal-hero__title-grad {
@@ -3243,19 +3234,19 @@ body {
 }
 .gal-hero__sub {
   margin: 1.25rem auto 0; max-width: 36rem;
-  font-size: clamp(1.2rem, 2.6vw, 1.4rem); color: var(--color-muted); font-weight: 500; line-height: 1.65;
+  font-size: clamp(1rem, 2.2vw, 1.25rem); color: var(--color-muted); font-weight: 500; line-height: 1.6;
 }
 .gal-hero__slogan {
   margin: 1.5rem 0 0; display: flex; justify-content: center; align-items: center; gap: 0.35rem;
-  font-size: 1.05rem; font-weight: 700; letter-spacing: 0.14em; color: var(--color-bright); text-transform: uppercase;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.22em; color: var(--color-bright); text-transform: uppercase;
 }
 .gal-hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; margin-top: 1.75rem; }
 .gal-hero__foot {
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;
-  padding-top: 1.5rem; border-top: 1px solid rgba(226,232,240,0.7); font-size: 1rem; color: var(--color-muted);
+  padding-top: 1.5rem; border-top: 1px solid rgba(226,232,240,0.7); font-size: 0.75rem; color: var(--color-muted);
 }
-.gal-hero__quote { margin: 0; font-weight: 600; color: var(--color-navy); font-size: 1.05rem; line-height: 1.5; }
-.gal-hero__platform { margin: 0.35rem 0 0; font-size: 0.9rem; letter-spacing: 0.04em; color: #64748b; font-weight: 600; }
+.gal-hero__quote { margin: 0; font-weight: 600; color: var(--color-navy); }
+.gal-hero__platform { margin: 0; font-size: 0.7rem; letter-spacing: 0.06em; color: #94a3b8; font-weight: 500; }
 
 /* ----- Manifesto ----- */
 .gal-manifesto__inner { max-width: 56rem; text-align: center; }
@@ -3263,9 +3254,9 @@ body {
 .gal-panel {
   padding: 1.75rem 2rem; border-radius: 1.5rem; background: #fff;
   border: 1px solid rgba(226,232,240,0.9); box-shadow: var(--shadow-xs);
-  font-size: clamp(1.1rem, 2.2vw, 1.3rem); font-weight: 500; line-height: 1.7; color: rgba(15,23,42,0.9);
+  font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 500; line-height: 1.7; color: rgba(15,23,42,0.9);
 }
-.gal-panel__label { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 600; color: var(--color-bright); }
+.gal-panel__label { margin: 0 0 0.5rem; font-size: 0.9rem; font-weight: 600; color: var(--color-bright); }
 .gal-panel--navy {
   background: linear-gradient(135deg, #073063, #0D559A); color: #fff; border: none;
 }
@@ -3703,14 +3694,14 @@ body {
   .gal-footer__grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 @media (max-width: 768px) {
+  /* 동그라미 친 텍스트 — 모바일 전용 확대 */
   .gal-hero__badge {
     align-self: flex-start !important;
-    padding: 0.65rem 1.25rem !important;
+    padding: 0.7rem 1.3rem !important;
   }
-  .gal-hero__badge .gal-eyebrow,
-  .gal-eyebrow {
-    font-size: 1.15rem !important;
-    letter-spacing: 0.05em !important;
+  .gal-hero__badge .gal-eyebrow {
+    font-size: 1.28rem !important;
+    letter-spacing: 0.04em !important;
   }
   .gal-hero__copy {
     text-align: left;
@@ -3722,12 +3713,12 @@ body {
     margin-left: 0;
     margin-right: 0;
     max-width: none;
-    font-size: 1.35rem !important;
+    font-size: 1.45rem !important;
     line-height: 1.7 !important;
   }
   .gal-hero__slogan {
     justify-content: flex-start;
-    font-size: 1.15rem !important;
+    font-size: 1.25rem !important;
     letter-spacing: 0.1em !important;
   }
   .gal-hero__actions {
@@ -3737,38 +3728,41 @@ body {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    gap: 0.65rem;
-    font-size: 1.15rem !important;
+    gap: 0.7rem;
+    font-size: 1.25rem !important;
   }
   .gal-hero__quote {
-    font-size: 1.2rem !important;
+    font-size: 1.3rem !important;
+    line-height: 1.55 !important;
   }
   .gal-hero__platform {
-    font-size: 1.05rem !important;
+    font-size: 1.12rem !important;
     color: #64748b !important;
+    font-weight: 600 !important;
   }
   .gal-manifesto__inner {
     text-align: left;
   }
   .gal-manifesto__inner > .gal-eyebrow {
-    font-size: 1.05rem !important;
+    font-size: 1.15rem !important;
+    letter-spacing: 0.08em !important;
   }
   .gal-manifesto__inner .gal-heading {
-    font-size: clamp(1.85rem, 6.5vw, 2.3rem) !important;
+    font-size: clamp(1.9rem, 6.8vw, 2.35rem) !important;
   }
   .gal-manifesto__inner .gal-desc,
   .gal-panel {
-    font-size: 1.28rem !important;
+    font-size: 1.38rem !important;
     line-height: 1.75 !important;
   }
   .gal-panel__label {
-    font-size: 1.1rem !important;
+    font-size: 1.15rem !important;
   }
   .gal-panel__lead {
-    font-size: clamp(1.45rem, 5.5vw, 1.7rem) !important;
+    font-size: clamp(1.5rem, 5.8vw, 1.75rem) !important;
   }
   .gal-panel__soft {
-    font-size: 1.2rem !important;
+    font-size: 1.25rem !important;
   }
 }
 
@@ -3776,25 +3770,6 @@ body {
   .gal-audience__grid,
   .page-template .gal-card-grid--2 { grid-template-columns: 1fr; }
   .gal-hero { min-height: auto; padding-top: 6rem !important; }
-  .gal-hero__title {
-    font-size: clamp(2.2rem, 7.6vw, 2.8rem);
-  }
-  .gal-heading {
-    font-size: clamp(1.8rem, 6.4vw, 2.25rem);
-  }
-  .gal-desc {
-    font-size: 1.22rem;
-  }
-  .gal-btn {
-    font-size: 1.15rem;
-    min-height: 54px;
-  }
-  .gal-value-card__title {
-    font-size: 1.2rem;
-  }
-  .gal-value-card__body {
-    font-size: 1.15rem;
-  }
   .gal-hero__actions .gal-btn { width: 100%; }
   .gal-float { bottom: 1rem; right: 0.75rem; }
 }
