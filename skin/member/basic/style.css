@@ -383,12 +383,7 @@
 .gal-pw-toggle.is-visible {
   color: #198AD6;
 }
-.gal-pw-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
+.gal-pw-toggle i {
+  font-size: 16px;
   pointer-events: none;
-}
-.gal-pw-icon[hidden] {
-  display: none !important;
 }

@@ -764,22 +764,10 @@
         btn.setAttribute('aria-label', show ? '비밀번호 숨기기' : '비밀번호 보기');
         btn.classList.toggle('is-visible', show);
 
-        var showIcon = btn.querySelector('.gal-pw-icon--show');
-        var hideIcon = btn.querySelector('.gal-pw-icon--hide');
-        if (showIcon && hideIcon) {
-          if (show) {
-            showIcon.setAttribute('hidden', 'hidden');
-            hideIcon.removeAttribute('hidden');
-          } else {
-            hideIcon.setAttribute('hidden', 'hidden');
-            showIcon.removeAttribute('hidden');
-          }
-        } else {
-          var icon = btn.querySelector('i');
-          if (icon) {
-            icon.classList.toggle('fa-eye', !show);
-            icon.classList.toggle('fa-eye-slash', show);
-          }
+        var icon = btn.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-eye', !show);
+          icon.classList.toggle('fa-eye-slash', show);
         }
       });
     });
