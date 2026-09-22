@@ -107,14 +107,6 @@ if (!isset($gal_nav_fallback) || !is_array($gal_nav_fallback)) {
             ),
         ),
         array(
-            'name' => '소식',
-            'link' => gal_page_url('news'),
-            'sub'  => array(
-                array('name' => '공지사항', 'link' => gal_bbs_url('board.php?bo_table=notice')),
-                array('name' => '교회 소식', 'link' => gal_page_url('news', 'church')),
-            ),
-        ),
-        array(
             'name' => '공지사항',
             'link' => gal_bbs_url('board.php?bo_table=notice'),
             'sub'  => array(
@@ -149,7 +141,7 @@ if (!function_exists('gal_filter_hidden_menus')) {
         if (!is_array($menus)) {
             return $menus;
         }
-        $hidden = array('다음세대');
+        $hidden = array('다음세대', '소식');
         $out = array();
         foreach ($menus as $row) {
             $name = isset($row['me_name']) ? trim($row['me_name']) : '';
