@@ -42,7 +42,15 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
 	                <div class="gal-pw-wrap">
 	                    <input type="password" name="mb_password" id="reg_mb_password" <?php echo $required ?> class="frm_input full_input <?php echo $required ?>" minlength="3" maxlength="20" placeholder="비밀번호">
 	                    <button type="button" class="gal-pw-toggle" data-target="reg_mb_password" aria-label="비밀번호 보기" aria-pressed="false">
-	                        <i class="fa fa-eye" aria-hidden="true"></i>
+	                        <svg class="gal-pw-icon gal-pw-icon--show" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+	                            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/>
+	                            <circle fill="none" stroke="currentColor" stroke-width="1.8" cx="12" cy="12" r="2.6"/>
+	                        </svg>
+	                        <svg class="gal-pw-icon gal-pw-icon--hide" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" hidden>
+	                            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/>
+	                            <circle fill="none" stroke="currentColor" stroke-width="1.8" cx="12" cy="12" r="2.6"/>
+	                            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 20L20 4"/>
+	                        </svg>
 	                    </button>
 	                </div>
 	            </li>
@@ -51,7 +59,15 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
 	                <div class="gal-pw-wrap">
 	                    <input type="password" name="mb_password_re" id="reg_mb_password_re" <?php echo $required ?> class="frm_input full_input <?php echo $required ?>" minlength="3" maxlength="20" placeholder="비밀번호 확인">
 	                    <button type="button" class="gal-pw-toggle" data-target="reg_mb_password_re" aria-label="비밀번호 확인 보기" aria-pressed="false">
-	                        <i class="fa fa-eye" aria-hidden="true"></i>
+	                        <svg class="gal-pw-icon gal-pw-icon--show" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+	                            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/>
+	                            <circle fill="none" stroke="currentColor" stroke-width="1.8" cx="12" cy="12" r="2.6"/>
+	                        </svg>
+	                        <svg class="gal-pw-icon gal-pw-icon--hide" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" hidden>
+	                            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/>
+	                            <circle fill="none" stroke="currentColor" stroke-width="1.8" cx="12" cy="12" r="2.6"/>
+	                            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 20L20 4"/>
+	                        </svg>
 	                    </button>
 	                </div>
 	            </li>
