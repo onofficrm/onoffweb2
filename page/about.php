@@ -52,7 +52,7 @@ g5_page_start('교회 소개');
         </p>
         <p class="gal-card__text gal-card__text--invert">
           GAL교회는<br>
-          다시 GAL수 있도록<br>
+          당신이 하나님께 다시 <strong class="gal-underline">GAL</strong> 수 있도록<br>
           돕는 교회입니다.
         </p>
       </article>
