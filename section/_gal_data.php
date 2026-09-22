@@ -123,7 +123,7 @@ if (!isset($gal_nav_fallback) || !is_array($gal_nav_fallback)) {
             ),
         ),
         array(
-            'name' => '회원',
+            'name' => '회원가입',
             'link' => gal_bbs_url('register.php'),
             'sub'  => array(
                 array('name' => '회원가입', 'link' => gal_bbs_url('register.php')),
@@ -212,9 +212,32 @@ if (!function_exists('gal_notice_menu_row')) {
 if (!function_exists('gal_member_menu_row')) {
     function gal_member_menu_row()
     {
+        global $is_member;
+
         $confirm = gal_bbs_url('member_confirm.php').'?url='.rawurlencode(gal_bbs_url('register_form.php'));
+
+        if (!empty($is_member)) {
+            return array(
+                'me_name'   => '회원',
+                'me_link'   => $confirm,
+                'me_target' => 'self',
+                'sub'       => array(
+                    array(
+                        'me_name'   => '정보수정',
+                        'me_link'   => $confirm,
+                        'me_target' => 'self',
+                    ),
+                    array(
+                        'me_name'   => '로그아웃',
+                        'me_link'   => gal_bbs_url('logout.php'),
+                        'me_target' => 'self',
+                    ),
+                ),
+            );
+        }
+
         return array(
-            'me_name'   => '회원',
+            'me_name'   => '회원가입',
             'me_link'   => gal_bbs_url('register.php'),
             'me_target' => 'self',
             'sub'       => array(
@@ -247,13 +270,27 @@ if (!function_exists('gal_member_menu_row')) {
         if (!is_array($menus) || !count($menus)) {
             return $menus;
         }
+
+        $member = gal_member_menu_row();
+        $out = array();
+        $replaced = false;
+
         foreach ($menus as $row) {
             $name = isset($row['me_name']) ? trim($row['me_name']) : '';
             if ($name === '회원' || $name === '회원가입') {
-                return $menus;
+                if (!$replaced) {
+                    $out[] = $member;
+                    $replaced = true;
+                }
+                continue;
             }
+            $out[] = $row;
         }
-        $menus[] = gal_member_menu_row();
-        return $menus;
+
+        if (!$replaced) {
+            $out[] = $member;
+        }
+
+        return $out;
     }
 }
