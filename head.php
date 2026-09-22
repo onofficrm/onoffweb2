@@ -49,7 +49,7 @@ add_stylesheet('<link rel="preconnect" href="https://fonts.gstatic.com" crossori
 add_stylesheet('<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">', 8);
 
 // 템플릿 전용 CSS/JS (default.css·common.js 이후 로드)
-$g5_custom_css_path = G5_CSS_PATH.'/custom.css';
+$g5_custom_css_path = G5_PATH.'/'.G5_CSS_DIR.'/custom.css';
 $g5_custom_css_ver = is_file($g5_custom_css_path) ? '?v='.filemtime($g5_custom_css_path) : '';
 add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/custom.css'.$g5_custom_css_ver.'">', 10);
 if (is_file(G5_LIB_PATH.'/icrm.lib.php')) {
