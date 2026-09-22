@@ -3890,6 +3890,77 @@ body {
   color: #073063;
 }
 
+/* ----- About brand statement ----- */
+.page-about .gal-brand-band {
+  position: relative;
+  overflow: hidden;
+  margin: 2.5rem 0 0;
+  padding: 3.5rem 1.5rem;
+  background: #073063;
+  color: #fff;
+  text-align: center;
+}
+.page-about .gal-brand-band__glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(600px, 90vw); height: 280px;
+  background: rgba(25,138,214,0.22);
+  filter: blur(48px); border-radius: 50%;
+  pointer-events: none;
+}
+.page-about .gal-brand-band__inner {
+  position: relative; z-index: 1;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.page-about .gal-brand-band__title {
+  margin: 0;
+  font-size: clamp(1.45rem, 5vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.page-about .gal-divider {
+  width: 4rem; height: 4px;
+  margin: 1.5rem auto;
+  border-radius: 999px;
+  background: #198AD6;
+}
+.page-about .gal-brand-band__text {
+  margin: 0 auto;
+  max-width: 28rem;
+  font-size: clamp(1.05rem, 3.5vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.65;
+  color: #e0f2fe;
+}
+.page-about .gal-brand-band__emphasis {
+  margin: 1.5rem 0 0;
+  font-size: clamp(1.2rem, 4vw, 1.75rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.page-about .gal-brand-band__foot {
+  margin-top: 1.75rem;
+}
+.page-about .gal-slogan--light {
+  color: rgba(186,230,253,0.95);
+}
+.page-about .gal-section--cta {
+  text-align: center;
+}
+.page-about .gal-cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
 @media (max-width: 640px) {
   .page-pastor .gal-grid--4 { grid-template-columns: 1fr; }
   .page-pastor .gal-timeline__arrow { display: none; }
