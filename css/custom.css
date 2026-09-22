@@ -1375,6 +1375,35 @@
    6. Responsive
    -------------------------------------------------------------------------- */
 
+/* 그누보드 default.css min-width:1200px 해제 — 없으면 폰에서 PC폭으로 밀려 버튼 글씨가 화면 밖에 있음 */
+@media (max-width: 1199px) {
+  #hd,
+  #wrapper,
+  #ft {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #hd_pop,
+  #hd_wrapper,
+  #tnb .inner,
+  #gnb .gnb_wrap,
+  #container_wr,
+  #ft_wr,
+  #ft_copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+}
+
 /* Tablet — 1024px 이하 */
 @media (max-width: 1024px) {
   :root {
@@ -3183,6 +3212,24 @@ body {
 
 #wrapper {
   padding-top: calc(var(--header-height) + 1.25rem);
+  min-width: 0 !important;
+  max-width: 100%;
+}
+#ft {
+  min-width: 0 !important;
+  max-width: 100%;
+}
+#hd {
+  min-width: 0 !important;
+  max-width: 100%;
+}
+#hd_wrapper,
+#container_wr,
+#ft_wr,
+#ft_copy {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
 }
 #wrapper:has(.site-main),
 #wrapper:has(.page-template) {
