@@ -218,8 +218,17 @@ if (!function_exists('gal_member_menu_row')) {
         $confirm = gal_bbs_url('member_confirm.php').'?url='.rawurlencode(gal_bbs_url('register_form.php'));
 
         if (!empty($is_member)) {
+            global $member;
+            $nick = '';
+            if (is_array($member) && !empty($member['mb_nick'])) {
+                $nick = get_text($member['mb_nick']);
+            } elseif (is_array($member) && !empty($member['mb_name'])) {
+                $nick = get_text($member['mb_name']);
+            }
+            $label = ($nick !== '') ? $nick.'님' : '내 계정';
+
             return array(
-                'me_name'   => '회원',
+                'me_name'   => $label,
                 'me_link'   => $confirm,
                 'me_target' => 'self',
                 'sub'       => array(

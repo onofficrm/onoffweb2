@@ -251,6 +251,20 @@ if (function_exists('gal_inject_member_menu')) {
                     <?php } ?>
                 </ul>
 
+                <?php if ($is_member) {
+                    $gal_status_name = '';
+                    if (!empty($member['mb_nick'])) {
+                        $gal_status_name = get_text($member['mb_nick']);
+                    } elseif (!empty($member['mb_name'])) {
+                        $gal_status_name = get_text($member['mb_name']);
+                    }
+                ?>
+                <span class="gal-login-status" title="로그인 중">
+                    <span class="gal-login-status__dot" aria-hidden="true"></span>
+                    <span class="gal-login-status__text"><?php echo $gal_status_name !== '' ? $gal_status_name.'님' : '로그인 중'; ?></span>
+                </span>
+                <?php } ?>
+
                 <a href="<?php echo htmlspecialchars($g5_inquiry_url, ENT_QUOTES, 'UTF-8'); ?>" class="btn btn-primary site-header__cta gal-header-cta"<?php echo $g5_cta_is_external ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>><?php echo get_text($g5_consult_label); ?></a>
 
                 <button type="button" class="site-header__menu-btn" aria-controls="siteMobileNav" aria-expanded="false" title="전체메뉴">
@@ -269,6 +283,19 @@ if (function_exists('gal_inject_member_menu')) {
                 </button>
             </div>
             <div class="gal-mobile-quick">
+                <?php if ($is_member) {
+                    $gal_mobile_status = '';
+                    if (!empty($member['mb_nick'])) {
+                        $gal_mobile_status = get_text($member['mb_nick']);
+                    } elseif (!empty($member['mb_name'])) {
+                        $gal_mobile_status = get_text($member['mb_name']);
+                    }
+                ?>
+                <div class="gal-login-status gal-login-status--mobile">
+                    <span class="gal-login-status__dot" aria-hidden="true"></span>
+                    <span class="gal-login-status__text"><?php echo $gal_mobile_status !== '' ? $gal_mobile_status.'님 · 로그인 중' : '로그인 중'; ?></span>
+                </div>
+                <?php } ?>
                 <a href="<?php echo function_exists('gal_page_url') ? gal_page_url('sermons') : G5_URL.'/page/sermons.php'; ?>" class="gal-mobile-quick__btn gal-mobile-quick__btn--primary">말씀 보기</a>
                 <a href="<?php echo function_exists('gal_page_url') ? gal_page_url('about') : G5_URL.'/page/about.php'; ?>" class="gal-mobile-quick__btn">GAL교회 알아보기</a>
             </div>
