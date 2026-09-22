@@ -246,6 +246,7 @@ if (function_exists('gal_inject_member_menu')) {
                     <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
                     <?php } ?>
                     <?php } else { ?>
+                    <li><a href="<?php echo G5_BBS_URL; ?>/register.php">회원가입</a></li>
                     <li><a href="<?php echo G5_BBS_URL; ?>/login.php">로그인</a></li>
                     <?php } ?>
                 </ul>

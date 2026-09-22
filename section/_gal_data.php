@@ -130,6 +130,7 @@ if (!isset($gal_nav_fallback) || !is_array($gal_nav_fallback)) {
                 array('name' => '로그인', 'link' => gal_bbs_url('login.php')),
                 array('name' => '아이디/비밀번호 찾기', 'link' => gal_bbs_url('password_lost.php')),
                 array('name' => '정보수정', 'link' => gal_bbs_url('member_confirm.php').'?url='.rawurlencode(gal_bbs_url('register_form.php'))),
+                array('name' => '로그아웃', 'link' => gal_bbs_url('logout.php')),
             ),
         ),
     );
@@ -259,6 +260,11 @@ if (!function_exists('gal_member_menu_row')) {
                 array(
                     'me_name'   => '정보수정',
                     'me_link'   => $confirm,
+                    'me_target' => 'self',
+                ),
+                array(
+                    'me_name'   => '로그아웃',
+                    'me_link'   => gal_bbs_url('logout.php'),
                     'me_target' => 'self',
                 ),
             ),
