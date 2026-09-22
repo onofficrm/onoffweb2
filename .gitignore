@@ -6,6 +6,7 @@
 data/dbconfig.php
 data/dbconfig.local.php
 data/icrm.config.php
+config.mail.php
 
 # 런타임·업로드 (서버/FTP에서 별도 관리)
 data/cache/

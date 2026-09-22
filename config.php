@@ -177,8 +177,17 @@ define('G5_MOBILE_AGENT',   'phone|samsung.*mobile|lgtel|mobile|[^A]skt|nokia|bl
 
 // SMTP
 // lib/mailer.lib.php 에서 사용
-define('G5_SMTP',      '127.0.0.1');
-define('G5_SMTP_PORT', '25');
+// 기본은 PHP mail() 사용 (공유호스팅에서 127.0.0.1 SMTP는 자주 실패함)
+// 외부 SMTP가 필요하면 프로젝트 루트에 config.mail.php 를 만들어 덮어쓰세요.
+if (is_file(G5_PATH.'/config.mail.php')) {
+    include_once(G5_PATH.'/config.mail.php');
+}
+if (!defined('G5_SMTP')) {
+    define('G5_SMTP', '');
+}
+if (!defined('G5_SMTP_PORT')) {
+    define('G5_SMTP_PORT', '25');
+}
 
 
 /********************

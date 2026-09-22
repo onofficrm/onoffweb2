@@ -77,8 +77,17 @@ $content .= '<a href="'.$href.'" target="_blank" style="display:block;padding:30
 $content .= '</div>';
 $content .= '</div>';
 
-mailer($config['cf_admin_email_name'], $config['cf_admin_email'], $mb['mb_email'], $subject, $content, 1);
+// 메일발송 사용 여부
+if (empty($config['cf_email_use'])) {
+    alert('현재 사이트에서 메일발송 기능이 꺼져 있습니다.\\n관리자 환경설정에서 메일발송 사용을 켜 주세요.');
+}
+
+$sent = mailer($config['cf_admin_email_name'], $config['cf_admin_email'], $mb['mb_email'], $subject, $content, 1);
 
 run_event('password_lost2_after', $mb, $mb_nonce, $mb_lost_certify);
+
+if (!$sent) {
+    alert('메일 발송에 실패했습니다.\\n잠시 후 다시 시도하시거나, 관리자에게 문의해 주세요.\\n(스팸함도 함께 확인해 주세요.)');
+}
 
 alert_close($generic_message);
