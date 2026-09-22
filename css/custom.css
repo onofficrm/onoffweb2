@@ -1735,7 +1735,8 @@
   right: 0;
   z-index: 1002;
   width: min(320px, 88vw);
-  height: 100%;
+  height: 100vh;
+  height: 100dvh;
   padding: var(--space-lg);
   overflow-y: auto;
   background: var(--color-bg);
