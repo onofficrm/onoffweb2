@@ -737,6 +737,43 @@
   };
 
   /* --------------------------------------------------------------------------
+   * Password show / hide toggle (.gal-pw-toggle)
+   * -------------------------------------------------------------------------- */
+  G5Template.initPasswordToggle = function () {
+    var buttons = G5Template.qsa('.gal-pw-toggle');
+    if (!buttons.length) {
+      return;
+    }
+
+    buttons.forEach(function (btn) {
+      if (btn.getAttribute('data-gal-pw-bound') === '1') {
+        return;
+      }
+      btn.setAttribute('data-gal-pw-bound', '1');
+
+      btn.addEventListener('click', function () {
+        var targetId = btn.getAttribute('data-target');
+        var input = targetId ? document.getElementById(targetId) : null;
+        if (!input) {
+          return;
+        }
+
+        var show = input.type === 'password';
+        input.type = show ? 'text' : 'password';
+        btn.setAttribute('aria-pressed', show ? 'true' : 'false');
+        btn.setAttribute('aria-label', show ? '비밀번호 숨기기' : '비밀번호 보기');
+        btn.classList.toggle('is-visible', show);
+
+        var icon = btn.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-eye', !show);
+          icon.classList.toggle('fa-eye-slash', show);
+        }
+      });
+    });
+  };
+
+  /* --------------------------------------------------------------------------
    * Master init
    * -------------------------------------------------------------------------- */
   G5Template.init = function () {
@@ -757,6 +794,7 @@
     G5Template.initGalSermonModal();
     G5Template.initGalWelcomeModal();
     G5Template.initGalFloatTip();
+    G5Template.initPasswordToggle();
   };
 
   G5Template.ready(function () {

@@ -58,7 +58,9 @@ if (is_file(G5_LIB_PATH.'/icrm.lib.php')) {
         icrm_enqueue_board_assets();
     }
 }
-add_javascript('<script src="'.G5_JS_URL.'/custom.js"></script>', 20);
+$g5_custom_js_path = G5_PATH.'/'.G5_JS_DIR.'/custom.js';
+$g5_custom_js_ver = is_file($g5_custom_js_path) ? '?v='.filemtime($g5_custom_js_path) : '';
+add_javascript('<script src="'.G5_JS_URL.'/custom.js'.$g5_custom_js_ver.'"></script>', 20);
 
 include_once(G5_LIB_PATH.'/latest.lib.php');
 include_once(G5_LIB_PATH.'/outlogin.lib.php');

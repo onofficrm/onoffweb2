@@ -21,7 +21,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
             <label for="login_id" class="sound_only">회원아이디<strong class="sound_only"> 필수</strong></label>
             <input type="text" name="mb_id" id="login_id" required class="frm_input required" size="20" maxLength="20" placeholder="아이디">
             <label for="login_pw" class="sound_only">비밀번호<strong class="sound_only"> 필수</strong></label>
-            <input type="password" name="mb_password" id="login_pw" required class="frm_input required" size="20" maxLength="20" placeholder="비밀번호">
+            <div class="gal-pw-wrap">
+                <input type="password" name="mb_password" id="login_pw" required class="frm_input required" size="20" maxLength="20" placeholder="비밀번호">
+                <button type="button" class="gal-pw-toggle" data-target="login_pw" aria-label="비밀번호 보기" aria-pressed="false">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>
+            </div>
             <button type="submit" class="btn_submit">로그인</button>
             
             <div id="login_info">

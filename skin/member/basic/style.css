@@ -336,3 +336,46 @@
 #profile .my_profile_img img {border-radius:50%}
 #profile .profile_img img {border-radius:50%}
 #profile .profile_name .sv_wrap {font-weight:bold;text-align:left}
+
+/* 비밀번호 보기/숨기기 */
+.gal-pw-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.gal-pw-wrap .frm_input {
+  width: 100%;
+  padding-right: 44px !important;
+  box-sizing: border-box;
+}
+.gal-pw-toggle {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 2;
+}
+.gal-pw-toggle:hover,
+.gal-pw-toggle:focus {
+  color: #073063;
+  background: rgba(7, 48, 99, 0.06);
+  outline: none;
+}
+.gal-pw-toggle.is-visible {
+  color: #198AD6;
+}
+.gal-pw-toggle i {
+  font-size: 16px;
+  pointer-events: none;
+}

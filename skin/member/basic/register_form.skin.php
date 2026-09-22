@@ -39,11 +39,21 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
 	            </li>
 	            <li class="half_input left_input margin_input">
 	                <label for="reg_mb_password">비밀번호 (필수)</label>
-	                <input type="password" name="mb_password" id="reg_mb_password" <?php echo $required ?> class="frm_input full_input <?php echo $required ?>" minlength="3" maxlength="20" placeholder="비밀번호">
+	                <div class="gal-pw-wrap">
+	                    <input type="password" name="mb_password" id="reg_mb_password" <?php echo $required ?> class="frm_input full_input <?php echo $required ?>" minlength="3" maxlength="20" placeholder="비밀번호">
+	                    <button type="button" class="gal-pw-toggle" data-target="reg_mb_password" aria-label="비밀번호 보기" aria-pressed="false">
+	                        <i class="fa fa-eye" aria-hidden="true"></i>
+	                    </button>
+	                </div>
 	            </li>
 	            <li class="half_input left_input">
 	                <label for="reg_mb_password_re">비밀번호 확인 (필수)</label>
-	                <input type="password" name="mb_password_re" id="reg_mb_password_re" <?php echo $required ?> class="frm_input full_input <?php echo $required ?>" minlength="3" maxlength="20" placeholder="비밀번호 확인">
+	                <div class="gal-pw-wrap">
+	                    <input type="password" name="mb_password_re" id="reg_mb_password_re" <?php echo $required ?> class="frm_input full_input <?php echo $required ?>" minlength="3" maxlength="20" placeholder="비밀번호 확인">
+	                    <button type="button" class="gal-pw-toggle" data-target="reg_mb_password_re" aria-label="비밀번호 확인 보기" aria-pressed="false">
+	                        <i class="fa fa-eye" aria-hidden="true"></i>
+	                    </button>
+	                </div>
 	            </li>
 	        </ul>
 	    </div>
