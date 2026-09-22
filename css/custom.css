@@ -3135,9 +3135,24 @@ body {
 }
 .gal-mobile-quick__btn--primary { background: var(--color-navy); color: #fff; border-color: transparent; }
 
-#wrapper { padding-top: 0; }
+#wrapper {
+  padding-top: calc(var(--header-height) + 1.25rem);
+}
+#wrapper:has(.site-main),
+#wrapper:has(.page-template) {
+  padding-top: 0;
+}
 .page-index #wrapper { padding-top: 0; }
 .site-main { padding-top: 0; background: var(--color-canvas); overflow: hidden; }
+
+/* 회원가입·로그인 등 회원스킨이 헤더에 가리지 않도록 */
+#wrapper .register,
+#wrapper #fregisterform,
+#wrapper .mbskin,
+#wrapper #login_fs,
+#wrapper .new_win {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
 
 /* ----- Hero ----- */
 .gal-hero {
