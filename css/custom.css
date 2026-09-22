@@ -3816,15 +3816,23 @@ body {
 .page-pastor .gal-card--pillar {
   text-align: center; padding: 1.75rem 1.25rem;
 }
-.page-pastor .gal-mark {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 2.75rem; height: 2.75rem; border-radius: 0.9rem;
-  font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: #fff;
-  margin-bottom: 0.75rem;
+.page-pastor .gal-card--pillar .gal-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.45;
 }
-.page-pastor .gal-mark--g { background: #073063; }
-.page-pastor .gal-mark--a { background: #0D559A; }
-.page-pastor .gal-mark--l { background: #198AD6; }
+.page-pastor .gal-card__en {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-bright);
+}
+.page-pastor .gal-mark {
+  display: none;
+}
 .page-pastor .gal-brand-band {
   position: relative; overflow: hidden;
   margin: 2rem auto 0; max-width: var(--container);

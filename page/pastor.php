@@ -5,7 +5,7 @@ g5_page_start('목회자 소개');
 ?>
 <div class="page-template page-pastor">
 
-  <section class="gal-page-hero gal-page-hero--split">
+  <section id="profile" class="gal-page-hero gal-page-hero--split">
     <div class="gal-page-hero__copy">
       <div class="gal-badge">
         <span class="gal-badge__dot" aria-hidden="true"></span>
@@ -52,18 +52,6 @@ g5_page_start('목회자 소개');
     </div>
   </section>
 
-  <section id="profile" class="gal-section gal-section--narrow">
-    <article class="gal-card gal-card--profile">
-      <span class="gal-eyebrow">LEADERSHIP</span>
-      <h2 class="gal-section__title">이대희 목사</h2>
-      <p class="gal-lead">
-        이대희 목사는 하나님의 말씀을 삶에 적용하고,
-        다음 세대를 세우며, 복음이 일상 속에서 살아 움직이도록 돕는
-        목회를 지향하고 있습니다.
-      </p>
-    </article>
-  </section>
-
   <section class="gal-section gal-section--narrow">
     <div class="gal-section__head gal-section__head--center">
       <span class="gal-eyebrow">PASTORAL JOURNEY</span>
@@ -104,27 +92,19 @@ g5_page_start('목회자 소개');
     </div>
     <div class="gal-grid gal-grid--4">
       <article class="gal-card gal-card--pillar">
-        <span class="gal-mark gal-mark--g" aria-hidden="true">W</span>
-        <span class="gal-eyebrow">WORD</span>
-        <h3 class="gal-card__title">말씀</h3>
+        <h3 class="gal-card__title"><span class="gal-card__en">WORD</span> 말씀</h3>
         <p class="gal-card__text">하나님의 말씀을<br>삶에 연결합니다.</p>
       </article>
       <article class="gal-card gal-card--pillar">
-        <span class="gal-mark gal-mark--a" aria-hidden="true">N</span>
-        <span class="gal-eyebrow">NEXT GENERATION</span>
-        <h3 class="gal-card__title">다음세대</h3>
+        <h3 class="gal-card__title"><span class="gal-card__en">NEXT GENERATION</span> 다음세대</h3>
         <p class="gal-card__text">다음 세대가<br>믿음 안에서 성장하도록 돕습니다.</p>
       </article>
       <article class="gal-card gal-card--pillar">
-        <span class="gal-mark gal-mark--l" aria-hidden="true">C</span>
-        <span class="gal-eyebrow">COMMUNITY</span>
-        <h3 class="gal-card__title">공동체</h3>
+        <h3 class="gal-card__title"><span class="gal-card__en">COMMUNITY</span> 공동체</h3>
         <p class="gal-card__text">함께 믿고,<br>함께 성장하는 공동체를 세웁니다.</p>
       </article>
       <article class="gal-card gal-card--pillar">
-        <span class="gal-mark gal-mark--g" aria-hidden="true">M</span>
-        <span class="gal-eyebrow">MISSION</span>
-        <h3 class="gal-card__title">복음</h3>
+        <h3 class="gal-card__title"><span class="gal-card__en">MISSION</span> 복음</h3>
         <p class="gal-card__text">복음이 교회를 넘어<br>일상 속에서 살아 움직이게 합니다.</p>
       </article>
     </div>
