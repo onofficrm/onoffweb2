@@ -2925,9 +2925,9 @@ body {
 .gal-eyebrow {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-bright);
 }
@@ -3243,19 +3243,19 @@ body {
 }
 .gal-hero__sub {
   margin: 1.25rem auto 0; max-width: 36rem;
-  font-size: clamp(1.15rem, 2.5vw, 1.35rem); color: var(--color-muted); font-weight: 500; line-height: 1.65;
+  font-size: clamp(1.2rem, 2.6vw, 1.4rem); color: var(--color-muted); font-weight: 500; line-height: 1.65;
 }
 .gal-hero__slogan {
   margin: 1.5rem 0 0; display: flex; justify-content: center; align-items: center; gap: 0.35rem;
-  font-size: 0.95rem; font-weight: 700; letter-spacing: 0.16em; color: var(--color-bright); text-transform: uppercase;
+  font-size: 1.05rem; font-weight: 700; letter-spacing: 0.14em; color: var(--color-bright); text-transform: uppercase;
 }
 .gal-hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; margin-top: 1.75rem; }
 .gal-hero__foot {
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;
-  padding-top: 1.5rem; border-top: 1px solid rgba(226,232,240,0.7); font-size: 0.75rem; color: var(--color-muted);
+  padding-top: 1.5rem; border-top: 1px solid rgba(226,232,240,0.7); font-size: 1rem; color: var(--color-muted);
 }
-.gal-hero__quote { margin: 0; font-weight: 600; color: var(--color-navy); }
-.gal-hero__platform { margin: 0; font-size: 0.7rem; letter-spacing: 0.06em; color: #94a3b8; font-weight: 500; }
+.gal-hero__quote { margin: 0; font-weight: 600; color: var(--color-navy); font-size: 1.05rem; line-height: 1.5; }
+.gal-hero__platform { margin: 0.35rem 0 0; font-size: 0.9rem; letter-spacing: 0.04em; color: #64748b; font-weight: 600; }
 
 /* ----- Manifesto ----- */
 .gal-manifesto__inner { max-width: 56rem; text-align: center; }
@@ -3263,9 +3263,9 @@ body {
 .gal-panel {
   padding: 1.75rem 2rem; border-radius: 1.5rem; background: #fff;
   border: 1px solid rgba(226,232,240,0.9); box-shadow: var(--shadow-xs);
-  font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 500; line-height: 1.7; color: rgba(15,23,42,0.9);
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem); font-weight: 500; line-height: 1.7; color: rgba(15,23,42,0.9);
 }
-.gal-panel__label { margin: 0 0 0.5rem; font-size: 0.9rem; font-weight: 600; color: var(--color-bright); }
+.gal-panel__label { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 600; color: var(--color-bright); }
 .gal-panel--navy {
   background: linear-gradient(135deg, #073063, #0D559A); color: #fff; border: none;
 }
@@ -3702,50 +3702,99 @@ body {
   .gal-pastor__copy .gal-btn { margin-left: auto; margin-right: auto; }
   .gal-footer__grid { grid-template-columns: 1fr; gap: 2rem; }
 }
+@media (max-width: 768px) {
+  .gal-hero__badge {
+    align-self: flex-start !important;
+    padding: 0.65rem 1.25rem !important;
+  }
+  .gal-hero__badge .gal-eyebrow,
+  .gal-eyebrow {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.05em !important;
+  }
+  .gal-hero__copy {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+  .gal-hero__sub {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    font-size: 1.35rem !important;
+    line-height: 1.7 !important;
+  }
+  .gal-hero__slogan {
+    justify-content: flex-start;
+    font-size: 1.15rem !important;
+    letter-spacing: 0.1em !important;
+  }
+  .gal-hero__actions {
+    justify-content: flex-start;
+  }
+  .gal-hero__foot {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.65rem;
+    font-size: 1.15rem !important;
+  }
+  .gal-hero__quote {
+    font-size: 1.2rem !important;
+  }
+  .gal-hero__platform {
+    font-size: 1.05rem !important;
+    color: #64748b !important;
+  }
+  .gal-manifesto__inner {
+    text-align: left;
+  }
+  .gal-manifesto__inner > .gal-eyebrow {
+    font-size: 1.05rem !important;
+  }
+  .gal-manifesto__inner .gal-heading {
+    font-size: clamp(1.85rem, 6.5vw, 2.3rem) !important;
+  }
+  .gal-manifesto__inner .gal-desc,
+  .gal-panel {
+    font-size: 1.28rem !important;
+    line-height: 1.75 !important;
+  }
+  .gal-panel__label {
+    font-size: 1.1rem !important;
+  }
+  .gal-panel__lead {
+    font-size: clamp(1.45rem, 5.5vw, 1.7rem) !important;
+  }
+  .gal-panel__soft {
+    font-size: 1.2rem !important;
+  }
+}
+
 @media (max-width: 640px) {
   .gal-audience__grid,
   .page-template .gal-card-grid--2 { grid-template-columns: 1fr; }
   .gal-hero { min-height: auto; padding-top: 6rem !important; }
-  .gal-hero__badge {
-    align-self: flex-start;
-    padding: 0.6rem 1.2rem;
-  }
-  .gal-hero__badge .gal-eyebrow {
-    font-size: 1.05rem;
-    letter-spacing: 0.06em;
-  }
   .gal-hero__title {
     font-size: clamp(2.2rem, 7.6vw, 2.8rem);
-  }
-  .gal-hero__sub {
-    font-size: 1.22rem;
-  }
-  .gal-hero__slogan {
-    font-size: 1.05rem;
   }
   .gal-heading {
     font-size: clamp(1.8rem, 6.4vw, 2.25rem);
   }
   .gal-desc {
-    font-size: 1.18rem;
+    font-size: 1.22rem;
   }
   .gal-btn {
     font-size: 1.15rem;
     min-height: 54px;
   }
-  .gal-panel {
-    font-size: 1.18rem;
-  }
-  .gal-panel__lead {
-    font-size: clamp(1.4rem, 5.2vw, 1.65rem);
-  }
   .gal-value-card__title {
     font-size: 1.2rem;
   }
   .gal-value-card__body {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
   .gal-hero__actions .gal-btn { width: 100%; }
-  .gal-hero__foot { flex-direction: column; text-align: center; }
   .gal-float { bottom: 1rem; right: 0.75rem; }
 }
