@@ -18,12 +18,15 @@ if (!defined('_GNUBOARD_')) {
 
 /**
  * 서브페이지 시작 (head.php)
+ * head/tail 은 그누보드 관례상 전역 스코프 변수를 쓰므로,
+ * 함수 안에서 include 할 때 GLOBALS 를 참조로 끌어온다.
  * @param string $title 브라우저·container_title용
  */
 function g5_page_start($title)
 {
     global $g5;
     $g5['title'] = $title;
+    extract($GLOBALS, EXTR_REFS | EXTR_SKIP);
     include_once(G5_PATH.'/head.php');
 }
 
@@ -32,5 +35,6 @@ function g5_page_start($title)
  */
 function g5_page_end()
 {
+    extract($GLOBALS, EXTR_REFS | EXTR_SKIP);
     include_once(G5_PATH.'/tail.php');
 }

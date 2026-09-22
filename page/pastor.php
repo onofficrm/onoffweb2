@@ -25,7 +25,7 @@ g5_page_start('목회자 소개');
         <div class="gal-pastor-card__frame">
           <img
             class="gal-pastor-card__img"
-            src="<?php echo G5_URL; ?>/img/main/pastor-placeholder.svg"
+            src="<?php echo G5_URL; ?>/img/main/pastor-profile.png"
             alt="이대희 목사"
             width="388"
             height="525"
@@ -57,10 +57,8 @@ g5_page_start('목회자 소개');
       <span class="gal-eyebrow">LEADERSHIP</span>
       <h2 class="gal-section__title">이대희 목사</h2>
       <p class="gal-lead">
-        이대희 목사는<br>
-        하나님의 말씀을 삶에 적용하고,<br>
-        다음 세대를 세우며,<br>
-        복음이 일상 속에서 살아 움직이도록 돕는<br>
+        이대희 목사는 하나님의 말씀을 삶에 적용하고,
+        다음 세대를 세우며, 복음이 일상 속에서 살아 움직이도록 돕는
         목회를 지향하고 있습니다.
       </p>
     </article>

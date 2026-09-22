@@ -3743,12 +3743,23 @@ body {
   gap: 2.5rem;
   align-items: center;
   max-width: var(--container);
+  width: 100%;
+  box-sizing: border-box;
   text-align: left;
   padding: 6rem 1.5rem 3rem;
 }
-.page-pastor .gal-page-hero__copy { position: relative; z-index: 1; }
+.page-pastor .gal-page-hero__copy {
+  position: relative; z-index: 1; min-width: 0; width: 100%;
+}
 .page-pastor .gal-page-hero__media {
   display: flex; justify-content: center; position: relative; z-index: 1;
+  min-width: 0; width: 100%;
+}
+.page-pastor .gal-page-hero__title,
+.page-pastor .gal-lead,
+.page-pastor .gal-card__text {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 .page-pastor .gal-section__title {
   margin: 0.5rem 0 0;
@@ -3760,8 +3771,11 @@ body {
 }
 .page-pastor .gal-card--profile {
   text-align: center; padding: 2.5rem 2rem;
+  width: 100%; max-width: 100%; box-sizing: border-box;
 }
-.page-pastor .gal-card--profile .gal-lead { margin-top: 1.25rem; }
+.page-pastor .gal-card--profile .gal-lead {
+  margin-top: 1.25rem; max-width: 36rem; margin-left: auto; margin-right: auto;
+}
 .page-pastor .gal-timeline {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
   gap: 0.65rem 0.5rem; margin: 0 0 1.75rem;

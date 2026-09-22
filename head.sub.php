@@ -112,7 +112,7 @@ if(!defined('G5_IS_ADMIN'))
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 <?php
-if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
+if (!empty($is_member)) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
     $sr_admin_msg = '';
     if ($is_admin == 'super') $sr_admin_msg = "최고관리자 ";
     else if ($is_admin == 'group') $sr_admin_msg = "그룹관리자 ";
