@@ -18,11 +18,10 @@ if (!defined('_GNUBOARD_')) exit;
       </article>
       <article class="gal-panel gal-panel--navy reveal">
         <p class="gal-panel__lead">어디에 있든<br>다시 하나님을 만날 수 있는 교회.</p>
-        <div class="gal-panel__bar" aria-hidden="true"></div>
         <p class="gal-panel__soft">
-          GAL교회는 당신이 하나님께 다시
-          <strong class="gal-underline">‘갈’</strong>
-          수 있도록 돕는 교회입니다.
+          GAL교회는<br>
+          다시 GAL수 있도록<br>
+          돕는 교회입니다.
         </p>
       </article>
     </div>

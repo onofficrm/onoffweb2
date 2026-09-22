@@ -50,10 +50,9 @@ g5_page_start('교회 소개');
           어디에 있든<br>
           다시 하나님을 만날 수 있는 교회.
         </p>
-        <div class="gal-divider gal-divider--soft" aria-hidden="true"></div>
         <p class="gal-card__text gal-card__text--invert">
           GAL교회는<br>
-          당신이 하나님께 다시 <strong class="gal-underline">‘갈’</strong> 수 있도록<br>
+          다시 GAL수 있도록<br>
           돕는 교회입니다.
         </p>
       </article>
