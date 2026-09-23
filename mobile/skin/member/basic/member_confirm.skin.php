@@ -44,4 +44,33 @@ function fmemberconfirm_submit(f)
 
     return true;
 }
+
+(function () {
+    var buttons = document.querySelectorAll('#mb_confirm .gal-pw-toggle');
+    for (var i = 0; i < buttons.length; i++) {
+        (function (btn) {
+            btn.addEventListener('click', function () {
+                var targetId = btn.getAttribute('data-target');
+                var input = targetId ? document.getElementById(targetId) : null;
+                if (!input) {
+                    return;
+                }
+                var show = input.type === 'password';
+                input.type = show ? 'text' : 'password';
+                btn.setAttribute('aria-pressed', show ? 'true' : 'false');
+                btn.setAttribute('aria-label', show ? '비밀번호 숨기기' : '비밀번호 보기');
+                if (show) {
+                    btn.classList.add('is-visible');
+                } else {
+                    btn.classList.remove('is-visible');
+                }
+                var icon = btn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-eye', !show);
+                    icon.classList.toggle('fa-eye-slash', show);
+                }
+            });
+        })(buttons[i]);
+    }
+})();
 </script>
