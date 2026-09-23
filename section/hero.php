@@ -33,9 +33,6 @@ $gal_kakao = htmlspecialchars(gal_kakao_url(), ENT_QUOTES, 'UTF-8');
       <p class="gal-hero__sub">
         온라인에서 만나고,<br class="gal-br-mobile"> 말씀으로 깨어나고,<br class="gal-br-mobile"> 사랑으로 세상에 나아갑니다.
       </p>
-      <p class="gal-hero__slogan font-display">
-        <span>GO</span><span class="gal-dot">·</span><span>AWAKEN</span><span class="gal-dot">·</span><span>LOVE</span>
-      </p>
       <div class="gal-hero__actions">
         <a href="<?php echo gal_page_url('sermons'); ?>" class="gal-btn gal-btn--primary" id="hero-cta-sermon">
           <span class="gal-btn__icon" aria-hidden="true">▶</span>
