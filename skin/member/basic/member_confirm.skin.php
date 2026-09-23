@@ -26,7 +26,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
         <span class="confirm_id">회원아이디</span>
         <span id="mb_confirm_id"><?php echo $member['mb_id'] ?></span>
         <label for="confirm_mb_password" class="sound_only">비밀번호<strong>필수</strong></label>
-        <input type="password" name="mb_password" id="confirm_mb_password" required class="required frm_input" size="15" maxLength="20" placeholder="비밀번호">
+        <div class="gal-pw-wrap">
+            <input type="password" name="mb_password" id="confirm_mb_password" required class="required frm_input" size="15" maxLength="20" placeholder="비밀번호">
+            <button type="button" class="gal-pw-toggle" data-target="confirm_mb_password" aria-label="비밀번호 보기" aria-pressed="false">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </button>
+        </div>
         <input type="submit" value="확인" id="btn_submit" class="btn_submit">
     </fieldset>
 

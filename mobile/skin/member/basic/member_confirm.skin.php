@@ -24,7 +24,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
     <fieldset>
         회원아이디
         <span id="mb_confirm_id"><?php echo $member['mb_id'] ?></span>
-        <input type="password" name="mb_password" id="mb_confirm_pw" placeholder="비밀번호(필수)" required class="frm_input" size="15" maxLength="20">
+        <div class="gal-pw-wrap">
+            <input type="password" name="mb_password" id="mb_confirm_pw" placeholder="비밀번호(필수)" required class="frm_input" size="15" maxLength="20">
+            <button type="button" class="gal-pw-toggle" data-target="mb_confirm_pw" aria-label="비밀번호 보기" aria-pressed="false">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </button>
+        </div>
         <input type="submit" value="확인" id="btn_submit" class="btn_submit">
     </fieldset>
 
