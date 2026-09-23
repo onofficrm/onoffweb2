@@ -160,7 +160,7 @@ g5_page_start('교회 소개');
           <div class="gal-step-num gal-step-num--02">02</div>
           <span class="gal-eyebrow">AWAKEN</span>
           <h3 class="gal-card__title">말씀으로 깨어납니다.</h3>
-          <p class="gal-card__text">깊이 있는 성경 말씀을 통해 영혼이 회복되고,<br class="gal-br-mobile">성경적 세계관으로 삶을 조명합니다.</p>
+          <p class="gal-card__text">깊이 있는 성경 말씀을 통해<br class="gal-br-mobile"><span class="gal-panel__nowrap">영혼이 회복되고,</span><br class="gal-br-mobile">성경적 세계관으로 삶을 조명합니다.</p>
           <div class="gal-card__foot gal-card__foot--a">말씀을 통한 내적 변화</div>
         </article>
         <article class="gal-card gal-card--step">
