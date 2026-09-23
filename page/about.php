@@ -3,6 +3,26 @@ include_once(dirname(__FILE__).'/_init.php');
 include_once(G5_PATH.'/section/_helpers.php');
 g5_page_start('교회 소개');
 ?>
+<style>
+.page-about .gal-story .gal-card,
+.page-about .gal-story .gal-card__headline,
+.page-about .gal-story .gal-card__text,
+.page-about #mission .gal-card--mission,
+.page-about #mission .gal-card__title,
+.page-about #mission .gal-card__foot,
+.page-about #mission .gal-word,
+.page-about #core-values .gal-card--step,
+.page-about #core-values .gal-card__title,
+.page-about #core-values .gal-card__text,
+.page-about #core-values .gal-card__foot,
+.page-about #core-values .gal-step-num {
+  text-align: center !important;
+}
+.page-about #mission .gal-card__top,
+.page-about #mission .gal-card__foot {
+  justify-content: center !important;
+}
+</style>
 <div class="page-template page-about">
 
   <section id="intro" class="gal-page-hero">

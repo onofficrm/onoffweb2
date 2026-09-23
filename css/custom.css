@@ -3928,8 +3928,25 @@ body {
   color: #073063 !important;
 }
 .page-about .gal-story .gal-card--story,
-.page-about .gal-story .gal-card--brand {
-  text-align: center;
+.page-about .gal-story .gal-card--brand,
+.page-about #mission .gal-card--mission,
+.page-about #core-values .gal-card--step {
+  text-align: center !important;
+}
+.page-about .gal-story .gal-card__headline,
+.page-about .gal-story .gal-card__text,
+.page-about .gal-card__headline--invert,
+.page-about .gal-card__text--invert,
+.page-about .gal-card__text--strong,
+.page-about .gal-card--mission .gal-word,
+.page-about .gal-card--mission .gal-card__title,
+.page-about .gal-card--mission .gal-card__foot,
+.page-about .gal-card--step .gal-card__title,
+.page-about .gal-card--step .gal-card__text,
+.page-about .gal-card--step .gal-card__foot,
+.page-about .gal-card--step .gal-step-num,
+.page-about .gal-card--step .gal-eyebrow {
+  text-align: center !important;
 }
 .page-about .gal-story .gal-card__headline,
 .page-about .gal-card__headline--invert {
@@ -3999,7 +4016,7 @@ body {
 .page-about #core-values .gal-card--step {
   width: 100%;
   box-sizing: border-box;
-  text-align: center;
+  text-align: center !important;
 }
 .page-about .gal-card--mission .gal-card__top {
   display: flex;
