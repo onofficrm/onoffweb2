@@ -3956,8 +3956,8 @@ body {
 
 /* G / A / L 글자만 — 다른 문구는 그대로 */
 .page-about .gal-card--mission .gal-mark {
-  font-size: 1.5rem !important;
-  font-weight: 900 !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
   line-height: 1 !important;
   margin-right: 0.35rem;
 }
@@ -3965,18 +3965,109 @@ body {
 .page-about .gal-card--mission .gal-mark--a { color: #0D72B8 !important; }
 .page-about .gal-card--mission .gal-mark--l { color: #0284C7 !important; }
 
-/* About mission: 가로로 너무 넓지 않게 스토리 카드와 비슷한 폭 */
-.page-about #mission.gal-section--narrow {
+/* About mission / GAL WAY — 위 스토리 카드와 같은 타이포·폭으로 통일 */
+.page-about #mission.gal-section--narrow,
+.page-about #core-values.gal-section--narrow {
   max-width: 40rem;
 }
-.page-about #mission .gal-grid {
+.page-about .gal-section__title {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.35rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: #073063;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+.page-about .gal-section__desc {
+  margin: 0.75rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #0F172A;
+  line-height: 1.7;
+}
+.page-about #mission .gal-grid,
+.page-about #core-values .gal-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
 }
-.page-about #mission .gal-card--mission {
+.page-about #mission .gal-card--mission,
+.page-about #core-values .gal-card--step {
   width: 100%;
   box-sizing: border-box;
+}
+.page-about .gal-card--mission .gal-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+.page-about .gal-card--mission .gal-card__label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-bright);
+}
+.page-about .gal-card--mission .gal-word {
+  display: block;
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-bright);
+  line-height: 1.3;
+}
+.page-about .gal-card--mission .gal-card__title,
+.page-about .gal-card--step .gal-card__title {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.8vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: #073063;
+}
+.page-about .gal-card--mission .gal-card__foot,
+.page-about .gal-card--step .gal-card__text {
+  margin: 1rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #0F172A;
+}
+.page-about .gal-card--mission .gal-card__foot {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+  color: #475569;
+}
+.page-about .gal-card--step .gal-step-num {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #198AD6;
+}
+.page-about .gal-card--step .gal-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.page-about .gal-card--step .gal-card__foot {
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+}
+.page-about .gal-journey__line {
+  display: none;
 }
 
 .page-template .gal-card-grid { display: grid; gap: 1.25rem; }
