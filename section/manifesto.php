@@ -14,7 +14,7 @@ if (!defined('_GNUBOARD_')) exit;
       </article>
       <article class="gal-panel reveal">
         <p class="gal-panel__label">누구에게나 열려 있는 안식처</p>
-        <p>처음 교회에 오는 사람도,<br>오랫동안 교회를 떠나 있었던 사람도,<br>교회가 낯선 사람도,</p>
+        <p>처음 교회에 오는 사람도,<br><span class="gal-panel__nowrap">오랫동안 교회를 떠나 있었던 사람도,</span><br>교회가 낯선 사람도,</p>
       </article>
       <article class="gal-panel gal-panel--navy reveal">
         <p class="gal-panel__lead">어디에 있든<br>다시 하나님을 만날 수 있는 교회.</p>

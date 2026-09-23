@@ -3500,6 +3500,10 @@ body {
 .gal-panel__lead { margin: 0; font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 700; line-height: 1.4; }
 .gal-panel__bar { width: 3rem; height: 4px; background: var(--color-bright); border-radius: 99px; margin: 1rem 0; }
 .gal-panel__soft { margin: 0; color: #e0f2fe; font-size: 1.05rem; font-weight: 400; }
+.gal-panel__nowrap {
+  display: inline-block;
+  white-space: nowrap;
+}
 .gal-panel--navy .gal-panel__lead,
 .gal-panel--navy .gal-panel__soft {
   color: #fff !important;
@@ -4830,13 +4834,18 @@ body {
   }
   .gal-manifesto__inner .gal-desc,
   .gal-panel {
-    font-size: 1.25rem !important;
-    line-height: 1.75 !important;
+    font-size: 1.02rem !important;
+    line-height: 1.7 !important;
     overflow: visible !important;
     word-break: keep-all;
+    padding: 1.5rem 1.25rem !important;
+  }
+  .gal-panel p {
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
   .gal-panel__label {
-    font-size: 1.1rem !important;
+    font-size: 0.95rem !important;
   }
   .gal-panel__lead {
     font-size: clamp(1.4rem, 5.5vw, 1.65rem) !important;
