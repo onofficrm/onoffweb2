@@ -2979,35 +2979,9 @@ body {
   color: var(--color-bright);
   font-weight: 800;
 }
-.gal-panel--navy .gal-underline,
-.gal-card--brand .gal-underline,
-.gal-card__text--invert .gal-underline {
+.gal-panel--navy .gal-underline {
   color: #fff;
   text-decoration-color: #7dd3fc;
-}
-
-/* About brand story card */
-.page-about .gal-card--brand {
-  background: linear-gradient(135deg, #073063, #0D559A 55%, #198AD6);
-  border: none;
-  color: #fff;
-}
-.page-about .gal-card__headline--invert {
-  margin: 0;
-  font-size: clamp(1.2rem, 3.5vw, 1.55rem);
-  font-weight: 800;
-  line-height: 1.45;
-  color: #fff;
-}
-.page-about .gal-card__text--invert {
-  margin: 1.25rem 0 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.7;
-  color: #e0f2fe;
-}
-.page-about .gal-card__text--invert .gal-underline {
-  color: #fff;
 }
 
 .gal-btn {
@@ -3779,6 +3753,30 @@ body {
 }
 .page-template .gal-card--navy {
   background: linear-gradient(135deg, #073063, #0D559A, #198AD6); color: #fff; border: none; text-align: center;
+}
+/* About brand card — 위 카드들과 같은 대비로 읽히게 */
+.page-template.page-about .gal-card--brand,
+.page-about .gal-card--brand {
+  background: #fff;
+  color: var(--color-navy);
+}
+.page-about .gal-card__headline--invert {
+  margin: 0;
+  font-size: clamp(1.2rem, 3.5vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.45;
+  color: var(--color-navy);
+}
+.page-about .gal-card__text--invert {
+  margin: 1.25rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+.page-about .gal-card__text--invert .gal-underline {
+  color: var(--color-bright);
+  text-decoration-color: var(--color-bright);
 }
 .page-template .gal-card-grid { display: grid; gap: 1.25rem; }
 .page-template .gal-card-grid--3 { grid-template-columns: repeat(3, 1fr); }
