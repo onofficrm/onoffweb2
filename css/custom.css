@@ -3483,11 +3483,13 @@ body {
 }
 .gal-hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; margin-top: 1.75rem; }
 .gal-hero__foot {
-  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;
-  padding-top: 1.5rem; border-top: 1px solid rgba(226,232,240,0.7); font-size: 0.75rem; color: var(--color-muted);
+  display: flex; flex-direction: column; flex-wrap: wrap;
+  justify-content: center; align-items: center; gap: 0.5rem;
+  padding-top: 1.5rem; border-top: 1px solid rgba(226,232,240,0.7);
+  font-size: 0.75rem; color: var(--color-muted); text-align: center;
 }
-.gal-hero__quote { margin: 0; font-weight: 600; color: var(--color-navy); }
-.gal-hero__platform { margin: 0; font-size: 0.7rem; letter-spacing: 0.06em; color: #94a3b8; font-weight: 500; }
+.gal-hero__quote { margin: 0; font-weight: 600; color: var(--color-navy); text-align: center; }
+.gal-hero__platform { margin: 0; font-size: 0.7rem; letter-spacing: 0.06em; color: #94a3b8; font-weight: 500; text-align: center; }
 
 /* ----- Manifesto ----- */
 .gal-manifesto__inner { max-width: 56rem; text-align: center; }
