@@ -3965,10 +3965,10 @@ body {
 .page-about .gal-card--mission .gal-mark--a { color: #0D72B8 !important; }
 .page-about .gal-card--mission .gal-mark--l { color: #0284C7 !important; }
 
-/* About mission / GAL WAY — 위 스토리 카드와 같은 타이포·폭으로 통일 */
+/* About mission / GAL WAY — 위 스토리 카드와 같은 폭·타이포로 통일 */
 .page-about #mission.gal-section--narrow,
 .page-about #core-values.gal-section--narrow {
-  max-width: 40rem;
+  max-width: 56rem;
 }
 .page-about .gal-section__title {
   margin: 0.5rem 0 0;
