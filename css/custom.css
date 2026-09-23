@@ -3002,7 +3002,13 @@ body {
 }
 .font-display { font-family: var(--font-display); }
 .gal-br-mobile { display: none; }
-@media (max-width: 640px) { .gal-br-mobile { display: block; } }
+@media (max-width: 768px) {
+  .gal-br-mobile { display: block; }
+  .page-about #core-values .gal-card--step .gal-card__text {
+    word-break: keep-all;
+    line-height: 1.7;
+  }
+}
 
 .is-sr-only, .site-g5-widgets--tail.is-sr-only {
   position: absolute !important;

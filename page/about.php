@@ -153,21 +153,21 @@ g5_page_start('교회 소개');
           <div class="gal-step-num gal-step-num--01">01</div>
           <span class="gal-eyebrow">MEET</span>
           <h3 class="gal-card__title">온라인에서 만납니다.</h3>
-          <p class="gal-card__text">거리와 상황의 벽을 넘어, 어디서나 자유롭고 편안하게 예배와 교제에 접속합니다.</p>
+          <p class="gal-card__text">거리와 상황의 벽을 넘어,<br class="gal-br-mobile">어디서나 자유롭고 편안하게<br class="gal-br-mobile">예배와 교제에 접속합니다.</p>
           <div class="gal-card__foot gal-card__foot--g">시작과 연결</div>
         </article>
         <article class="gal-card gal-card--step">
           <div class="gal-step-num gal-step-num--02">02</div>
           <span class="gal-eyebrow">AWAKEN</span>
           <h3 class="gal-card__title">말씀으로 깨어납니다.</h3>
-          <p class="gal-card__text">깊이 있는 성경 말씀을 통해 영혼이 회복되고, 성경적 세계관으로 삶을 조명합니다.</p>
+          <p class="gal-card__text">깊이 있는 성경 말씀을 통해 영혼이 회복되고,<br class="gal-br-mobile">성경적 세계관으로 삶을 조명합니다.</p>
           <div class="gal-card__foot gal-card__foot--a">말씀을 통한 내적 변화</div>
         </article>
         <article class="gal-card gal-card--step">
           <div class="gal-step-num gal-step-num--03">03</div>
           <span class="gal-eyebrow">GO</span>
           <h3 class="gal-card__title">삶의 자리로 나아갑니다.</h3>
-          <p class="gal-card__text">사랑을 품고 가정과 직장, 사회 속에서 빛과 소금의 제자로 살아갑니다.</p>
+          <p class="gal-card__text">사랑을 품고 가정과 직장, 사회 속에서<br class="gal-br-mobile">빛과 소금의 제자로 살아갑니다.</p>
           <div class="gal-card__foot gal-card__foot--l">세상을 향한 사랑의 실천</div>
         </article>
       </div>
