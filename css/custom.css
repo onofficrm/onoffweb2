@@ -2000,6 +2000,17 @@ html.page-sub #container {
   min-width: 0;
 }
 
+html.page-sub #container:has(.board-wrap),
+html.page-sub #container:has(#bo_v),
+html.page-sub #container:has(#bo_list),
+html.page-sub #container:has(#bo_w) {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem 1.5rem 3rem;
+  box-sizing: border-box;
+}
+
 /* 메인/서브 표시 제어 */
 .is-index-only {
   display: none;
@@ -2998,7 +3009,53 @@ body {
 .page-index #container_wr,
 .page-index #container,
 .page-sub #container_wr,
-.page-sub #container { width: 100%; max-width: none; float: none; padding: 0; margin: 0; }
+.page-sub #container {
+  width: 100%;
+  max-width: none;
+  float: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 게시판(목록/글보기/글쓰기): PC·모바일 모두 화면 안에 들어오게 */
+#container:has(.board-wrap),
+#container:has(#bo_v),
+#container:has(#bo_list),
+#container:has(#bo_w) {
+  width: 100% !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  float: none !important;
+  padding: 1.5rem 1.5rem 3rem !important;
+  box-sizing: border-box !important;
+}
+#bo_v,
+#bo_list,
+#bo_w,
+.board-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+#bo_v_title,
+#bo_v .bo_v_tit,
+#bo_v .board-title__text {
+  overflow: visible !important;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+#bo_v .board-view__head,
+#bo_v .board-view__meta,
+#bo_v .board-view__body,
+#bo_v #bo_v_atc,
+#bo_vc_w {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .page-index #wrapper { background: var(--color-canvas); }
 
 /* ----- Shared ----- */
