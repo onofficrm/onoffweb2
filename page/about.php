@@ -62,7 +62,7 @@ g5_page_start('교회 소개');
     </div>
   </section>
 
-  <section id="mission" class="gal-section">
+  <section id="mission" class="gal-section gal-section--narrow">
     <div class="gal-section__head gal-section__head--center">
       <span class="gal-eyebrow">OUR MISSION</span>
       <h2 class="gal-section__title">

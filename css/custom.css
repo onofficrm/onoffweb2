@@ -3965,6 +3965,20 @@ body {
 .page-about .gal-card--mission .gal-mark--a { color: #0D72B8 !important; }
 .page-about .gal-card--mission .gal-mark--l { color: #0284C7 !important; }
 
+/* About mission: 가로로 너무 넓지 않게 스토리 카드와 비슷한 폭 */
+.page-about #mission.gal-section--narrow {
+  max-width: 40rem;
+}
+.page-about #mission .gal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+.page-about #mission .gal-card--mission {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .page-template .gal-card-grid { display: grid; gap: 1.25rem; }
 .page-template .gal-card-grid--3 { grid-template-columns: repeat(3, 1fr); }
 .page-template .gal-card-grid--2 { grid-template-columns: repeat(2, 1fr); }
