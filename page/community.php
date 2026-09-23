@@ -31,6 +31,14 @@ g5_page_start('공동체');
   margin-left: auto !important;
   margin-right: auto !important;
 }
+.page-community #welcome .gal-welcome-copy .gal-card__text {
+  font-size: 1rem !important;
+  word-break: keep-all !important;
+}
+.page-community #welcome .gal-panel__nowrap {
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
 </style>
 <div class="page-template page-community">
 
@@ -97,7 +105,7 @@ g5_page_start('공동체');
       <h2 class="gal-section__title">GAL교회가 처음이신가요?</h2>
       <div class="gal-welcome-copy">
         <p>교회가 처음이어도 괜찮습니다.</p>
-        <p class="gal-card__text">오랫동안 교회를 떠나 있었다면 그것도 괜찮습니다.</p>
+        <p class="gal-card__text">오랫동안 교회를 떠나 있었다면 <span class="gal-panel__nowrap">그것도 괜찮습니다.</span></p>
         <p class="gal-card__title">
           어디에서 어떻게 시작해야 할지 모르겠다면<br>
           GAL교회가 함께하겠습니다.
