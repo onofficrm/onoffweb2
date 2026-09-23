@@ -4682,14 +4682,23 @@ body {
     overflow-x: hidden !important;
   }
 
-  /* 히어로: 고정 높이 해제 — 큰 글씨가 잘리지 않게 */
+  /* 히어로: 배지 위 하늘색 여백을 더 확보 */
   .gal-hero {
     min-height: 0 !important;
     height: auto !important;
     justify-content: flex-start !important;
-    padding-top: calc(var(--header-height) + 1.75rem) !important;
+    padding-top: calc(var(--header-height) + 3.5rem) !important;
     padding-bottom: 2.5rem !important;
     overflow: visible !important;
+  }
+  /* 메인 첫 화면: 헤더도 하늘색과 이어지게 */
+  .page-index .site-header:not(.is-scrolled) {
+    background-color: transparent !important;
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+  }
+  .page-index .site-header:not(.is-scrolled) .site-header__inner {
+    background: transparent;
   }
   .gal-hero__inner {
     min-height: 0 !important;
