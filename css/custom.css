@@ -3788,6 +3788,61 @@ body {
   color: #198AD6 !important;
   text-decoration-color: #198AD6 !important;
 }
+
+/* Mission G / A / L marks — 살짝 키우고 선명하게 */
+.page-about .gal-card--mission .gal-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+.page-about .gal-card--mission .gal-card__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+.page-about .gal-card--mission .gal-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.55rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.page-about .gal-card--mission .gal-mark--g { color: #073063 !important; }
+.page-about .gal-card--mission .gal-mark--a { color: #0D559A !important; }
+.page-about .gal-card--mission .gal-mark--l { color: #198AD6 !important; }
+.page-about .gal-card--mission .gal-word {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.page-about .gal-card--mission .gal-word--g { color: #073063; }
+.page-about .gal-card--mission .gal-word--a { color: #0D559A; }
+.page-about .gal-card--mission .gal-word--l { color: #198AD6; }
+.page-about .gal-card--mission .gal-card__foot {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+}
+.page-about .gal-grid--3 {
+  display: grid;
+  gap: 1.25rem;
+}
+
 .page-template .gal-card-grid { display: grid; gap: 1.25rem; }
 .page-template .gal-card-grid--3 { grid-template-columns: repeat(3, 1fr); }
 .page-template .gal-card-grid--2 { grid-template-columns: repeat(2, 1fr); }
