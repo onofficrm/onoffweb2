@@ -4370,6 +4370,69 @@ body {
   font-weight: 700;
 }
 
+/* ----- Community page: 3단계 카드 가운데 정렬 ----- */
+.page-community #online.gal-section {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-community #online .gal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+.page-community #online .gal-card--step {
+  text-align: center !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+.page-community #online .gal-card--step .gal-step-num,
+.page-community #online .gal-card--step .gal-eyebrow,
+.page-community #online .gal-card--step .gal-card__title,
+.page-community #online .gal-card--step .gal-card__text,
+.page-community #online .gal-card--step .gal-card__foot {
+  text-align: center !important;
+}
+.page-community #online .gal-card--step .gal-step-num {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #94a3b8;
+}
+.page-community #online .gal-card--step .gal-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.page-community #online .gal-card--step .gal-card__title {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.8vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: #073063;
+}
+.page-community #online .gal-card--step .gal-card__text {
+  margin: 1rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #0F172A;
+}
+.page-community #online .gal-card--step .gal-card__foot {
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+}
+.page-community #online .gal-cta-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
 /* ----- Pastor page ----- */
 .page-pastor .gal-page-hero--split {
   display: grid;

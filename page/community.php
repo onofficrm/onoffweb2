@@ -3,6 +3,20 @@ include_once(dirname(__FILE__).'/_init.php');
 include_once(G5_PATH.'/section/_helpers.php');
 g5_page_start('공동체');
 ?>
+<style>
+.page-community #online .gal-card--step,
+.page-community #online .gal-card--step .gal-step-num,
+.page-community #online .gal-card--step .gal-eyebrow,
+.page-community #online .gal-card--step .gal-card__title,
+.page-community #online .gal-card--step .gal-card__text,
+.page-community #online .gal-card--step .gal-card__foot {
+  text-align: center !important;
+}
+.page-community #online .gal-cta-actions {
+  display: flex !important;
+  justify-content: center !important;
+}
+</style>
 <div class="page-template page-community">
 
   <section class="gal-page-hero gal-page-hero--compact">
