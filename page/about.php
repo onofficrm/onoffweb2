@@ -40,7 +40,6 @@ g5_page_start('교회 소개');
         </p>
       </article>
       <article class="gal-card gal-card--story">
-        <span class="gal-eyebrow">FOR EVERY SOUL</span>
         <p class="gal-card__headline">
           처음 교회에 오는 사람도,
         </p>
