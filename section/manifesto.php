@@ -13,7 +13,7 @@ if (!defined('_GNUBOARD_')) exit;
         <p>시간과 장소의 한계를 넘어<br>누구나 말씀을 듣고, 예배하며,<br class="gal-br-mobile"><span class="gal-panel__nowrap">함께 성장할 수 있는 교회.</span></p>
       </article>
       <article class="gal-panel reveal">
-        <p>누구에게나 열려 있는 안식처<br>처음 교회에 오는 사람도,<br><span class="gal-panel__nowrap">오랫동안 교회를 떠나 있었던 사람도,</span><br>교회가 낯선 사람도,</p>
+        <p>처음 교회에 오는 사람도,<br><span class="gal-panel__nowrap">오랫동안 교회를 떠나 있었던 사람도,</span><br>교회가 낯선 사람도,<br>누구에게나 열려 있는 안식처</p>
       </article>
       <article class="gal-panel gal-panel--navy reveal">
         <p class="gal-panel__lead">어디에 있든<br>다시 하나님을 만날 수 있는 교회.</p>
