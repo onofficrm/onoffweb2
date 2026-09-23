@@ -47,6 +47,10 @@ g5_page_start('교회 소개');
   <section id="vision" class="gal-section gal-section--narrow">
     <div class="gal-section__head gal-section__head--center">
       <span class="gal-eyebrow">OUR STORY</span>
+      <h2 class="gal-section__title">
+        온라인에서 시작되어<br>
+        세상으로 이어지는 이야기.
+      </h2>
     </div>
     <div class="gal-story">
       <article class="gal-card gal-card--story">
