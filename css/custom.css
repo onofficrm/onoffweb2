@@ -1484,8 +1484,8 @@
   :root {
     --container-padding: 1rem;
     --section-padding-y: 3rem;
-    /* fixed 헤더(로고+패딩≈96px)보다 작으면 글 제목이 헤더에 가려짐 */
-    --header-height: 100px;
+    /* fixed 헤더보다 작으면 글 제목이 헤더에 가려짐 */
+    --header-height: 132px;
     --card-padding: var(--space-lg);
   }
 
