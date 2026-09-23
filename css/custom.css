@@ -3916,31 +3916,39 @@ body {
   border-radius: 1.5rem; padding: 2rem; box-shadow: var(--shadow-xs);
 }
 .page-template .gal-card--story .gal-card__headline {
-  margin: 0; font-size: clamp(1.15rem, 2.5vw, 1.5rem); font-weight: 700; color: var(--color-navy); line-height: 1.4;
+  margin: 0; font-size: clamp(1.15rem, 2.8vw, 1.35rem); font-weight: 700; color: var(--color-navy); line-height: 1.45;
 }
 .page-template .gal-card--navy {
   background: linear-gradient(135deg, #073063, #0D559A, #198AD6); color: #fff; border: none; text-align: center;
 }
-/* About brand card — 위 카드들과 같은 대비로 읽히게 */
+/* About story cards — 세 칸 타이포 통일 (헤드라인 + 본문) */
 .page-template.page-about .gal-card--brand,
 .page-about .gal-card--brand {
   background: #fff !important;
   color: #073063 !important;
 }
+.page-about .gal-story .gal-card__headline,
 .page-about .gal-card__headline--invert {
   margin: 0;
-  font-size: clamp(1.2rem, 3.5vw, 1.55rem);
-  font-weight: 800;
+  font-size: clamp(1.15rem, 2.8vw, 1.35rem);
+  font-weight: 700;
   line-height: 1.45;
   color: #073063 !important;
 }
-.page-about .gal-card__text--invert {
-  margin: 1.25rem 0 0;
+.page-about .gal-story .gal-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+.page-about .gal-story .gal-card__text,
+.page-about .gal-card__text--invert,
+.page-about .gal-card__text--strong {
+  margin: 1rem 0 0;
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.7;
   color: #0F172A !important;
 }
+.page-about .gal-story .gal-card__text .gal-underline,
 .page-about .gal-card__text--invert .gal-underline {
   color: #198AD6 !important;
   text-decoration-color: #198AD6 !important;

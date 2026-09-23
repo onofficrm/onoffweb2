@@ -31,7 +31,9 @@ g5_page_start('교회 소개');
     <div class="gal-story">
       <article class="gal-card gal-card--story">
         <p class="gal-card__headline">
-          시간과 장소의 한계를 넘어<br>
+          시간과 장소의 한계를 넘어
+        </p>
+        <p class="gal-card__text">
           누구나 말씀을 듣고,<br>
           예배하며,<br>
           함께 성장할 수 있는 교회.
@@ -39,18 +41,20 @@ g5_page_start('교회 소개');
       </article>
       <article class="gal-card gal-card--story">
         <span class="gal-eyebrow">FOR EVERY SOUL</span>
-        <p class="gal-card__text gal-card__text--strong">
-          처음 교회에 오는 사람도,<br>
+        <p class="gal-card__headline">
+          처음 교회에 오는 사람도,
+        </p>
+        <p class="gal-card__text">
           오랫동안 교회를 떠나 있었던 사람도,<br>
           교회가 낯선 사람도,
         </p>
       </article>
       <article class="gal-card gal-card--brand">
-        <p class="gal-card__headline gal-card__headline--invert">
+        <p class="gal-card__headline">
           어디에 있든<br>
           다시 하나님을 만날 수 있는 교회.
         </p>
-        <p class="gal-card__text gal-card__text--invert">
+        <p class="gal-card__text">
           GAL교회는<br>
           당신이 하나님께 다시 <strong class="gal-underline">GAL</strong> 수 있도록<br>
           돕는 교회입니다.
