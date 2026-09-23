@@ -3927,6 +3927,10 @@ body {
   background: #fff !important;
   color: #073063 !important;
 }
+.page-about .gal-story .gal-card--story,
+.page-about .gal-story .gal-card--brand {
+  text-align: center;
+}
 .page-about .gal-story .gal-card__headline,
 .page-about .gal-card__headline--invert {
   margin: 0;
@@ -3995,10 +3999,12 @@ body {
 .page-about #core-values .gal-card--step {
   width: 100%;
   box-sizing: border-box;
+  text-align: center;
 }
 .page-about .gal-card--mission .gal-card__top {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
   margin-bottom: 0.85rem;
 }
@@ -4040,6 +4046,7 @@ body {
 .page-about .gal-card--mission .gal-card__foot {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
   padding-top: 1rem;
   border-top: 1px solid #f1f5f9;
