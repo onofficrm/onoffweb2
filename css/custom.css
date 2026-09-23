@@ -1425,6 +1425,15 @@
     max-width: 100%;
     word-break: keep-all;
     overflow-wrap: anywhere;
+    font-size: clamp(1.35rem, 5vw, 1.75rem) !important;
+    line-height: 1.35 !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    padding-top: 0.25rem;
+  }
+
+  #bo_v .board-view__head {
+    padding-top: 0.5rem;
   }
 
   #bo_v .board-view__meta,
@@ -1461,7 +1470,7 @@
     --section-padding-y: 4rem;
     --font-size-3xl: 1.75rem;
     --font-size-4xl: 2rem;
-    --header-height: 68px;
+    --header-height: 88px;
   }
 
   .site-main .card-grid,
@@ -1475,7 +1484,8 @@
   :root {
     --container-padding: 1rem;
     --section-padding-y: 3rem;
-    --header-height: 60px;
+    /* fixed 헤더(로고+패딩≈96px)보다 작으면 글 제목이 헤더에 가려짐 */
+    --header-height: 100px;
     --card-padding: var(--space-lg);
   }
 
