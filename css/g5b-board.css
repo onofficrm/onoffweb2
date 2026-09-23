@@ -754,7 +754,7 @@
 
 .board-wrap .board-write-form__author {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-md, 1rem);
 }
 
@@ -908,5 +908,42 @@
 
   .board-wrap .board-write-form__author {
     grid-template-columns: 1fr;
+  }
+
+  /* 글쓰기: 기본 float/half_input 때문에 모바일에서 잘리던 문제 */
+  #bo_w.board-write,
+  .board-wrap.board-write,
+  #bo_w {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden;
+  }
+  #bo_w .bo_w_info .frm_input,
+  #bo_w .board-write-form__author .frm_input {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+  #bo_w .half_input,
+  .board-wrap .half_input {
+    width: 100% !important;
+  }
+  #bo_w .bo_w_tit .frm_input {
+    padding-right: 0.85rem !important;
+  }
+  #bo_w .board-write-form,
+  #bo_w .board-write-form__row,
+  #bo_w .board-write-form__field,
+  #bo_w .write_div,
+  #bo_w .frm_input,
+  #bo_w textarea,
+  #bo_w select,
+  #bo_w .file_wr {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }

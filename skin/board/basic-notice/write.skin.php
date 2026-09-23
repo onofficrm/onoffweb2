@@ -4,7 +4,7 @@ if (!defined('_GNUBOARD_')) exit;
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
-<section class="board-wrap board-wrap--basic-notice board-write" id="bo_w" style="width:<?php echo $width; ?>">
+<section class="board-wrap board-wrap--basic-notice board-write" id="bo_w">
     <h2 class="sound_only"><?php echo $g5['title'] ?></h2>
 
     <form name="fwrite" id="fwrite" class="board-write-form" action="<?php echo $action_url ?>" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">

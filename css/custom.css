@@ -4209,4 +4209,39 @@ body {
   .gal-audience__grid,
   .page-template .gal-card-grid--2 { grid-template-columns: 1fr; }
   .gal-float { bottom: 1rem; right: 0.75rem; }
+
+  /* 공지 글쓰기 모바일: 가로로 잘리는 입력칸 방지 */
+  #bo_w,
+  #bo_w.board-write,
+  .board-wrap.board-write {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  #container #bo_w,
+  #container .board-write-form {
+    overflow-x: hidden;
+  }
+  #bo_w .board-write-form__author {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  #bo_w .bo_w_info .frm_input,
+  #bo_w .half_input,
+  #bo_w #wr_password,
+  #bo_w #wr_homepage,
+  #bo_w #wr_name,
+  #bo_w #wr_email,
+  #bo_w #wr_subject,
+  #bo_w .frm_input,
+  #bo_w textarea {
+    float: none !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    box-sizing: border-box !important;
+  }
 }
