@@ -4,17 +4,32 @@ include_once(G5_PATH.'/section/_helpers.php');
 g5_page_start('공동체');
 ?>
 <style>
-.page-community #online .gal-card--step,
+.page-community #online .gal-card--step {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
 .page-community #online .gal-card--step .gal-step-num,
 .page-community #online .gal-card--step .gal-eyebrow,
 .page-community #online .gal-card--step .gal-card__title,
 .page-community #online .gal-card--step .gal-card__text,
 .page-community #online .gal-card--step .gal-card__foot {
   text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 36rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 .page-community #online .gal-cta-actions {
   display: flex !important;
   justify-content: center !important;
+  width: 100% !important;
+}
+.page-community #online .gal-cta-actions .gal-btn {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 </style>
 <div class="page-template page-community">
@@ -43,29 +58,29 @@ g5_page_start('공동체');
       <p class="gal-section__desc">형식적인 가입 절차 없이, 마음에 평안이 임할 때 한 걸음씩 동행합니다.</p>
     </div>
     <div class="gal-grid gal-grid--3">
-      <article class="gal-card gal-card--step">
-        <div class="gal-step-num gal-step-num--01">01</div>
-        <span class="gal-eyebrow">STEP 01</span>
-        <h3 class="gal-card__title">처음 만나기</h3>
-        <p class="gal-card__text">온라인 주일 예배에 참여하고, 카카오톡 1:1 상담을 통해 편안하게 궁금한 점을 나누며 가볍게 첫 인사를 나눕니다.</p>
-        <div class="gal-card__foot gal-card__foot--g">온라인 예배 &amp; 첫 만남</div>
+      <article class="gal-card gal-card--step" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <div class="gal-step-num gal-step-num--01" style="text-align:center;width:100%;">01</div>
+        <span class="gal-eyebrow" style="text-align:center;">STEP 01</span>
+        <h3 class="gal-card__title" style="text-align:center;width:100%;">처음 만나기</h3>
+        <p class="gal-card__text" style="text-align:center;max-width:36rem;margin-left:auto;margin-right:auto;">온라인 주일 예배에 참여하고, 카카오톡 1:1 상담을 통해 편안하게 궁금한 점을 나누며 가볍게 첫 인사를 나눕니다.</p>
+        <div class="gal-card__foot gal-card__foot--g" style="text-align:center;width:100%;">온라인 예배 &amp; 첫 만남</div>
       </article>
-      <article class="gal-card gal-card--step">
-        <div class="gal-step-num gal-step-num--02">02</div>
-        <span class="gal-eyebrow">STEP 02</span>
-        <h3 class="gal-card__title">말씀으로 연결되기</h3>
-        <p class="gal-card__text">정기적인 말씀 묵상과 온라인 소그룹 모임(GAL Cell)을 통해 성경적 나눔을 시작하고 영적인 공감대를 형성합니다.</p>
-        <div class="gal-card__foot gal-card__foot--a">소그룹 셀 모임 나눔</div>
+      <article class="gal-card gal-card--step" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <div class="gal-step-num gal-step-num--02" style="text-align:center;width:100%;">02</div>
+        <span class="gal-eyebrow" style="text-align:center;">STEP 02</span>
+        <h3 class="gal-card__title" style="text-align:center;width:100%;">말씀으로 연결되기</h3>
+        <p class="gal-card__text" style="text-align:center;max-width:36rem;margin-left:auto;margin-right:auto;">정기적인 말씀 묵상과 온라인 소그룹 모임(GAL Cell)을 통해 성경적 나눔을 시작하고 영적인 공감대를 형성합니다.</p>
+        <div class="gal-card__foot gal-card__foot--a" style="text-align:center;width:100%;">소그룹 셀 모임 나눔</div>
       </article>
-      <article class="gal-card gal-card--step">
-        <div class="gal-step-num gal-step-num--03">03</div>
-        <span class="gal-eyebrow">STEP 03</span>
-        <h3 class="gal-card__title">삶을 함께 나누기</h3>
-        <p class="gal-card__text">일상의 기쁨과 슬픔, 중보 기도를 함께 나누며 삶의 자리에서 예수 그리스도의 사랑을 이웃과 세상에 실천합니다.</p>
-        <div class="gal-card__foot gal-card__foot--l">사랑의 실천과 동행</div>
+      <article class="gal-card gal-card--step" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <div class="gal-step-num gal-step-num--03" style="text-align:center;width:100%;">03</div>
+        <span class="gal-eyebrow" style="text-align:center;">STEP 03</span>
+        <h3 class="gal-card__title" style="text-align:center;width:100%;">삶을 함께 나누기</h3>
+        <p class="gal-card__text" style="text-align:center;max-width:36rem;margin-left:auto;margin-right:auto;">일상의 기쁨과 슬픔, 중보 기도를 함께 나누며 삶의 자리에서 예수 그리스도의 사랑을 이웃과 세상에 실천합니다.</p>
+        <div class="gal-card__foot gal-card__foot--l" style="text-align:center;width:100%;">사랑의 실천과 동행</div>
       </article>
     </div>
-    <div class="gal-cta-actions">
+    <div class="gal-cta-actions" style="display:flex;justify-content:center;width:100%;">
       <a id="community-inquiry-cta"
          class="gal-btn gal-btn--primary"
          href="<?php echo htmlspecialchars(g5site_cfg('kakao_url', 'https://pf.kakao.com/_EkyrX/chat'), ENT_QUOTES, 'UTF-8'); ?>"
