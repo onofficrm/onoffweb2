@@ -10,7 +10,7 @@ $gal_kakao = htmlspecialchars(gal_kakao_url(), ENT_QUOTES, 'UTF-8');
       <h2 class="gal-heading">GAL교회가 처음이신가요?</h2>
       <div class="gal-welcome__copy">
         <p>교회가 처음이어도 괜찮습니다.</p>
-        <p class="gal-desc">오랫동안 교회를 떠나 있었다면<br class="gal-br-mobile"> 그것도 괜찮습니다.</p>
+        <p class="gal-desc">오랫동안 교회를 떠나 있었다면 <span class="gal-panel__nowrap">그것도 괜찮습니다.</span></p>
         <p class="gal-welcome__strong">어디에서 어떻게 시작해야 할지 모르겠다면<br>GAL교회가 함께하겠습니다.</p>
       </div>
       <div class="gal-welcome__actions">
