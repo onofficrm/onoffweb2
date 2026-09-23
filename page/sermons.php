@@ -41,6 +41,26 @@ $latest_sermons = array(
 $featured = $latest_sermons[0];
 $filters = array('전체', '주일 말씀', '메시지', '다음세대');
 ?>
+<style>
+.page-sermons .gal-card--featured,
+.page-sermons .gal-featured-meta,
+.page-sermons .gal-list-head,
+.page-sermons .gal-section--list,
+.page-sermons .gal-video,
+.page-sermons .gal-video__center,
+.page-sermons .gal-card--sermon,
+.page-sermons .gal-card--sermon .gal-card__body {
+  text-align: center !important;
+}
+.page-sermons .gal-card__top--row,
+.page-sermons .gal-featured-meta,
+.page-sermons .gal-list-head,
+.page-sermons .gal-filters,
+.page-sermons .gal-meta-row,
+.page-sermons .gal-card--sermon .gal-card__foot {
+  justify-content: center !important;
+}
+</style>
 <div class="page-template page-sermons">
 
   <header class="gal-page-hero gal-page-hero--compact">
