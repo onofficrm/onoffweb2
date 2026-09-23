@@ -112,7 +112,6 @@ if (!isset($gal_nav_fallback) || !is_array($gal_nav_fallback)) {
             'sub'  => array(
                 array('name' => '글목록', 'link' => gal_bbs_url('board.php?bo_table=notice')),
                 array('name' => '글쓰기', 'link' => gal_bbs_url('write.php?bo_table=notice')),
-                array('name' => '글수정', 'link' => gal_bbs_url('board.php?bo_table=notice')),
             ),
         ),
         array(
@@ -173,11 +172,6 @@ if (!function_exists('gal_notice_menu_row')) {
                     'me_link'   => gal_bbs_url('write.php?bo_table=notice'),
                     'me_target' => 'self',
                 ),
-                array(
-                    'me_name'   => '글수정',
-                    'me_link'   => gal_bbs_url('board.php?bo_table=notice'),
-                    'me_target' => 'self',
-                ),
             ),
         );
     }
@@ -187,26 +181,43 @@ if (!function_exists('gal_notice_menu_row')) {
         if (!is_array($menus) || !count($menus)) {
             return $menus;
         }
+        $has_notice = false;
+        $out = array();
         foreach ($menus as $row) {
             if (!empty($row['me_name']) && trim($row['me_name']) === '공지사항') {
-                return $menus;
-            }
-        }
-        $notice = gal_notice_menu_row();
-        $out = array();
-        $inserted = false;
-        foreach ($menus as $row) {
-            $name = isset($row['me_name']) ? $row['me_name'] : '';
-            if (!$inserted && $name !== '' && strpos($name, '상담') !== false) {
-                $out[] = $notice;
-                $inserted = true;
+                $has_notice = true;
+                if (!empty($row['sub']) && is_array($row['sub'])) {
+                    $subs = array();
+                    foreach ($row['sub'] as $sub) {
+                        $sub_name = isset($sub['me_name']) ? trim($sub['me_name']) : '';
+                        if ($sub_name === '글수정') {
+                            continue;
+                        }
+                        $subs[] = $sub;
+                    }
+                    $row['sub'] = $subs;
+                }
             }
             $out[] = $row;
         }
-        if (!$inserted) {
-            $out[] = $notice;
+        if ($has_notice) {
+            return $out;
         }
-        return $out;
+        $notice = gal_notice_menu_row();
+        $inserted = false;
+        $final = array();
+        foreach ($out as $row) {
+            $name = isset($row['me_name']) ? $row['me_name'] : '';
+            if (!$inserted && $name !== '' && strpos($name, '상담') !== false) {
+                $final[] = $notice;
+                $inserted = true;
+            }
+            $final[] = $row;
+        }
+        if (!$inserted) {
+            $final[] = $notice;
+        }
+        return $final;
     }
 }
 
