@@ -82,7 +82,7 @@ if (!function_exists('basic_notice_list_row')) {
 }
 ?>
 
-<div class="board-wrap board-wrap--basic-notice" id="bo_list" style="width:<?php echo $width; ?>">
+<div class="board-wrap board-wrap--basic-notice" id="bo_list">
 
     <?php if ($is_category) { ?>
     <nav class="board-cate" id="bo_cate">
